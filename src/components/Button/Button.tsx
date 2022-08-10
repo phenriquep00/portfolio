@@ -20,7 +20,7 @@ export function Button({ children, type, onClick }: ButtonProps) {
                 :
                 type.startsWith("t")
                 ? // tertiary button style
-                ''
+                'flex items-center justify-center text-emerald-700 font-semibold p-2 rounded-md w-fit h-fit hover:cursor-pointer hover:text-emerald-500 transition-colors duration-200'
                 :
                 ''
             }
