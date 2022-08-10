@@ -1,5 +1,7 @@
+import { Button } from "../../components/Button/Button";
+
 export function HomePage() {
     return (
-        <div className="">Working</div>
+        <Button type="p">Test</Button>
     )
 }
