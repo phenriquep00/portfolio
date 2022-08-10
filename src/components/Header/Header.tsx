@@ -6,6 +6,8 @@ export function Header() {
             <p>phenriquep00</p>
             <Button type="t" onClick={null}>github</Button> 
             <Button type="t" onClick={null}>linkedin</Button> 
+            <Button type="p" onClick={null}>linkedin</Button> 
+            <Button type="s" onClick={null}>linkedin</Button> 
 
         </header>
     )
