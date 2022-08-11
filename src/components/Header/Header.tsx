@@ -1,4 +1,4 @@
-import { FacebookLogo, GithubLogo, InstagramLogo, LinkedinLogo, TwitterLogo } from "phosphor-react";
+import { GithubLogo, LinkedinLogo } from "phosphor-react";
 import { useEffect, useState } from "react";
 import { Button } from "../Button/Button";
 import { Logo } from "../Logo/Logo";
@@ -17,73 +17,71 @@ export function Header() {
     }, []);
 
     return (
-        <header className="flex flex-row justify-start items-center w-full h-[7%] bg-[#2A2338] text-white gap-4 pl-6">
+        <header className="flex flex-row justify-between w-full h-[7%]  text-white ">
+            <div className="flex flex-row gap-4 md:pl-10 pl-4 justify-start items-center">
+                <Logo img="https://github.com/phenriquep00.png">
+                    {
+                        windowDimensions.width > 600 && windowDimensions.height > 800
+                            ?
+                            <p>phenriquep00</p>
+                            :
+                            null
+                    }
+                </Logo>
 
-            <Logo img="https://github.com/phenriquep00.png">
-            {
-                    windowDimensions.width > 600 && windowDimensions.height > 800
-                        ?
-                        <p>phenriquep00</p>
-                        :
-                        null
-                }
-            </Logo>
+                <Button type="t" onClick={null}>
+                    <GithubLogo weight="fill" size={20} className="mr-1" />
+                    {
+                        windowDimensions.width > 600 && windowDimensions.height > 800
+                            ?
+                            <p>Github</p>
+                            :
+                            null
+                    }
 
-            <Button type="t" onClick={null}>
-                <GithubLogo weight="fill" size={20} className="mr-1" />
+                </Button>
+
+                <Button type="t" onClick={null}>
+                    <LinkedinLogo weight="fill" size={20} className="mr-1" />
+                    {
+                        windowDimensions.width > 600 && windowDimensions.height > 800
+                            ?
+                            <p>Linkedin</p>
+                            :
+                            null
+                    }
+                </Button>
+            </div>
+
+            <div className="flex flex-row gap-4 pr-10 justify-start items-center">
+
                 {
                     windowDimensions.width > 600 && windowDimensions.height > 800
                         ?
-                        <p>Github</p>
+                        (
+                            <div className="flex flex-row gap-4 justify-start items-center">
+                                <Button type="t" onClick={null}>
+                                    <p>About me</p>
+                                </Button>
+
+                                <Button type="t" onClick={null}>
+                                    <p>Projects</p>
+                                </Button>
+
+                                <Button type="t" onClick={null}>
+                                    <p>Contacts</p>
+                                </Button>
+                            </div>
+
+                        )
+
                         :
                         null
                 }
 
-            </Button>
 
-            <Button type="t" onClick={null}>
-                <LinkedinLogo weight="fill" size={20} className="mr-1" />
-                {
-                    windowDimensions.width > 600 && windowDimensions.height > 800
-                        ?
-                        <p>Linkedin</p>
-                        :
-                        null
-                }
-            </Button>
+            </div>
 
-            <Button type="t" onClick={null}>
-                <FacebookLogo weight="fill" size={20} className="mr-1" />
-                {
-                    windowDimensions.width > 600 && windowDimensions.height > 800
-                        ?
-                        <p>Facebook</p>
-                        :
-                        null
-                }
-            </Button>
-
-            <Button type="t" onClick={null}>
-                <InstagramLogo weight="fill" size={20} className="mr-1" />
-                {
-                    windowDimensions.width > 600 && windowDimensions.height > 800
-                        ?
-                        <p>Instagram</p>
-                        :
-                        null
-                }
-            </Button>
-
-            <Button type="t" onClick={null}>
-                <TwitterLogo weight="fill" size={20} className="mr-1" />
-                {
-                    windowDimensions.width > 600 && windowDimensions.height > 800
-                        ?
-                        <p>Twitter</p>
-                        :
-                        null
-                }
-            </Button>
         </header>
     )
 }
