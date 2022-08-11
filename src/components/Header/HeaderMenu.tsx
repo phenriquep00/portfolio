@@ -1,10 +1,12 @@
-import { DotsThree, DotsThreeVertical, List } from "phosphor-react";
+import { List } from "phosphor-react";
 import { Button } from "../Button/Button";
+
+// TODO: conclude header menu
 
 export function HeaderMenu() {
 
     const toggleHeaderMenu = () => {
-        
+
     }
 
     return (
