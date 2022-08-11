@@ -2,6 +2,7 @@ import { GithubLogo, LinkedinLogo } from "phosphor-react";
 import { useEffect, useState } from "react";
 import { Button } from "../Button/Button";
 import { Logo } from "../Logo/Logo";
+import { HeaderMenu } from "./HeaderMenu";
 
 export function Header() {
 
@@ -53,7 +54,7 @@ export function Header() {
                 </Button>
             </div>
 
-            <div className="flex flex-row gap-4 pr-10 justify-start items-center">
+            <div className="flex flex-row gap-4 md:pr-10 pr-4 justify-start items-center">
 
                 {
                     windowDimensions.width > 600 && windowDimensions.height > 800
@@ -72,14 +73,10 @@ export function Header() {
                                     <p>Contacts</p>
                                 </Button>
                             </div>
-
                         )
-
                         :
-                        null
+                        <HeaderMenu />
                 }
-
-
             </div>
 
         </header>
