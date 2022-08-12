@@ -75,6 +75,7 @@ export function Header() {
                             </div>
                         )
                         :
+                        // todo: insert buttons inside header menu
                         <HeaderMenu />
                 }
             </div>
