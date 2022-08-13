@@ -9,6 +9,7 @@ type ButtonProps = PropsWithChildren<{
 export function Button({ children, type, onClick }: ButtonProps) {
     return (
         <div
+            onClick={onClick}
             className={
                 type.startsWith("p")
                     ? // primary button style

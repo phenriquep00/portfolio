@@ -75,8 +75,21 @@ export function Header() {
                             </div>
                         )
                         :
-                        // todo: insert buttons inside header menu
-                        <HeaderMenu />
+                        <HeaderMenu>
+                            <div className="flex flex-col gap-4 justify-start items-center">
+                                <Button type="t" onClick={null}>
+                                    <p>About me</p>
+                                </Button>
+
+                                <Button type="t" onClick={null}>
+                                    <p>Projects</p>
+                                </Button>
+
+                                <Button type="t" onClick={null}>
+                                    <p>Contacts</p>
+                                </Button>
+                            </div>
+                        </HeaderMenu>
                 }
             </div>
 
