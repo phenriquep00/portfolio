@@ -63,17 +63,19 @@ export function Header({ activeContent, updateActiveContent }: headerProps) {
                     </Button>
                 </a>
 
+                <a href="https://www.linkedin.com/in/pedro-lima-255a33223/" target={"_blank"}>
+                    <Button type="t" onClick={null}>
+                        <LinkedinLogo weight="fill" size={20} className="mr-1" />
+                        {
+                            windowDimensions.width > 600 && windowDimensions.height > 800
+                                ?
+                                <p>Linkedin</p>
+                                :
+                                null
+                        }
+                    </Button>
+                </a>
 
-                <Button type="t" onClick={null}>
-                    <LinkedinLogo weight="fill" size={20} className="mr-1" />
-                    {
-                        windowDimensions.width > 600 && windowDimensions.height > 800
-                            ?
-                            <p>Linkedin</p>
-                            :
-                            null
-                    }
-                </Button>
             </div>
 
             <div className="flex flex-row gap-4 md:pr-10 pr-4 justify-start items-center">
