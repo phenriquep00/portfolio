@@ -16,7 +16,7 @@ export function HeaderMenu({ children }: HeaderMenuProps) {
 
     return (
         <Button type={"t"} onClick={toggleHeaderMenu}>
-            <div className="bg-white w-44 h-30 absolute right-2 top-2 rounded-bl-3xl transition-all">
+            <div className="bg-slate-900 w-44 h-30 absolute right-2 top-2 rounded-bl-3xl transition-all">
                 {
                     headerMenuActive ? children : null
                 }

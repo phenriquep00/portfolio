@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Button } from "../Button/Button";
 import { Logo } from "../Logo/Logo";
 import { Navbar } from "../Navbar/Navbar";
+import { NavbarItem } from "../Navbar/NavbarItem";
 import { HeaderMenu } from "./HeaderMenu";
 
 export function Header() {
@@ -61,35 +62,35 @@ export function Header() {
                     windowDimensions.width > 600 && windowDimensions.height > 800
                         ?
                         (
-                            <div className="flex flex-row gap-4 justify-start items-center">
-                                <Navbar active={true} onClick={null}>
+                            <Navbar >
+                                <NavbarItem active={true} onClick={null}>
                                     <p>About me</p>
-                                </Navbar>
+                                </NavbarItem>
 
-                                <Navbar active={false} onClick={null}>
+                                <NavbarItem active={false} onClick={null}>
                                     <p>Projects</p>
-                                </Navbar>
+                                </NavbarItem>
 
-                                <Navbar active={false} onClick={null}>
+                                <NavbarItem active={false} onClick={null}>
                                     <p>Contacts</p>
-                                </Navbar>
-                            </div>
+                                </NavbarItem>
+                            </Navbar>
                         )
                         :
                         <HeaderMenu>
-                            <div className="flex flex-col gap-4 justify-start items-center">
-                                <Button type="t" onClick={null}>
+                            <Navbar >
+                                <NavbarItem active={true} onClick={null}>
                                     <p>About me</p>
-                                </Button>
+                                </NavbarItem>
 
-                                <Button type="t" onClick={null}>
+                                <NavbarItem active={false} onClick={null}>
                                     <p>Projects</p>
-                                </Button>
+                                </NavbarItem>
 
-                                <Button type="t" onClick={null}>
+                                <NavbarItem active={false} onClick={null}>
                                     <p>Contacts</p>
-                                </Button>
-                            </div>
+                                </NavbarItem>
+                            </Navbar>
                         </HeaderMenu>
                 }
             </div>
