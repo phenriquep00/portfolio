@@ -2,12 +2,24 @@ import { AboutMe } from "./AboutMe/AboutMe";
 import { Contacts } from "./Contacts/Contacts";
 import { Projects } from "./Projects/Projects";
 
-export function Content() {
+interface ContentProps{
+    activeContent: string;
+}
+
+export function Content({ activeContent }: ContentProps) {
     return(
         <div>
-            <AboutMe/>
-            <Projects/>
-            <Contacts/>
+            {
+                activeContent === 'About me'
+                ?
+                <AboutMe/>
+                :
+                activeContent === 'Projects'
+                ?
+                <Projects/>
+                :
+                <Contacts/>
+            }
         </div>
     )
 }

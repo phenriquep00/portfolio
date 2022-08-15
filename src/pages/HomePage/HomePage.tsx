@@ -9,13 +9,12 @@ export function HomePage() {
 ''
     const updateActiveContent = (k: SetStateAction<string>) => {
         setActiveContent(k);
-        console.log(k)
     }
     
     return (
         <div className="flex flex-col w-screen h-screen bg-[#2A2338]">
             <Header activeContent={activeContent} updateActiveContent={updateActiveContent}/>
-            <Content />
+            <Content activeContent={activeContent}/>
         </div>
     )
 }
