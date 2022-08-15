@@ -119,6 +119,7 @@ export function Header({ activeContent, updateActiveContent }: headerProps) {
                             </div>
                         </HeaderMenu>
                 }
+                
             </div>
 
         </header>

@@ -8,7 +8,7 @@ interface ContentProps{
 
 export function Content({ activeContent }: ContentProps) {
     return(
-        <div>
+        <div className="flex items-center content-center justify-center flex-1">
             {
                 activeContent === 'About me'
                 ?
