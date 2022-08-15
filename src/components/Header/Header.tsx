@@ -5,10 +5,16 @@ import { Logo } from "../Logo/Logo";
 import { Navbar } from "../Navbar/Navbar";
 import { NavbarItem } from "../Navbar/NavbarItem";
 import { HeaderMenu } from "./HeaderMenu";
+import { navbarItems, NavbarItemsProps } from "../../data";
 
 export function Header() {
 
     const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+    const [activeNavbarItem, setActiveNavbarItem] = useState('About Me')
+
+    const handleNavbarClick = () => {
+
+    }
 
     useEffect(() => {
         function handleResize() {
@@ -63,31 +69,33 @@ export function Header() {
                         ?
                         (
                             <Navbar >
-                                <NavbarItem active={true} onClick={null}>
-                                    <p>About me</p>
-                                </NavbarItem>
-
-                                <NavbarItem active={false} onClick={null}>
-                                    <p>Projects</p>
-                                </NavbarItem>
-
-                                <NavbarItem active={false} onClick={null}>
-                                    <p>Contacts</p>
-                                </NavbarItem>
+                                {
+                                    navbarItems.map(({ id, title }: NavbarItemsProps) => (
+                                        title === activeNavbarItem
+                                            ?
+                                            <NavbarItem active={true} onClick={handleNavbarClick} key={id}>
+                                                <p>{title}</p>
+                                            </NavbarItem>
+                                            :
+                                            <NavbarItem active={false} onClick={handleNavbarClick} key={id}>
+                                                <p>{title}</p>
+                                            </NavbarItem>
+                                    ))
+                                }
                             </Navbar>
                         )
                         :
                         <HeaderMenu>
                             <Navbar >
-                                <NavbarItem active={true} onClick={null}>
+                                <NavbarItem active={true} onClick={handleNavbarClick}>
                                     <p>About me</p>
                                 </NavbarItem>
 
-                                <NavbarItem active={false} onClick={null}>
+                                <NavbarItem active={false} onClick={handleNavbarClick}>
                                     <p>Projects</p>
                                 </NavbarItem>
 
-                                <NavbarItem active={false} onClick={null}>
+                                <NavbarItem active={false} onClick={handleNavbarClick}>
                                     <p>Contacts</p>
                                 </NavbarItem>
                             </Navbar>
