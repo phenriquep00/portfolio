@@ -2,6 +2,7 @@ import { GithubLogo, LinkedinLogo } from "phosphor-react";
 import { useEffect, useState } from "react";
 import { Button } from "../Button/Button";
 import { Logo } from "../Logo/Logo";
+import { Navbar } from "../Navbar/Navbar";
 import { HeaderMenu } from "./HeaderMenu";
 
 export function Header() {
@@ -61,17 +62,17 @@ export function Header() {
                         ?
                         (
                             <div className="flex flex-row gap-4 justify-start items-center">
-                                <Button type="t" onClick={null}>
+                                <Navbar onClick={null}>
                                     <p>About me</p>
-                                </Button>
+                                </Navbar>
 
-                                <Button type="t" onClick={null}>
+                                <Navbar onClick={null}>
                                     <p>Projects</p>
-                                </Button>
+                                </Navbar>
 
-                                <Button type="t" onClick={null}>
+                                <Navbar onClick={null}>
                                     <p>Contacts</p>
-                                </Button>
+                                </Navbar>
                             </div>
                         )
                         :
