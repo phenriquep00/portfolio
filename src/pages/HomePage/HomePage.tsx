@@ -6,7 +6,7 @@ import { Header } from "../../components/Header/Header";
 export function HomePage() {
 
     const [activeContent, setActiveContent] = useState('About Me')
-''
+
     const updateActiveContent = (k: SetStateAction<string>) => {
         setActiveContent(k);
     }
@@ -14,7 +14,7 @@ export function HomePage() {
     return (
         <div className="flex flex-col w-screen h-screen bg-[#2A2338]">
             <Header activeContent={activeContent} updateActiveContent={updateActiveContent}/>
-            <Content activeContent={activeContent}/>
+            <Content activeContent={activeContent} updateActiveContent={updateActiveContent}/>
         </div>
     )
 }

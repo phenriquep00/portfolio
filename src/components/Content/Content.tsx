@@ -2,23 +2,24 @@ import { AboutMe } from "./AboutMe/AboutMe";
 import { Contacts } from "./Contacts/Contacts";
 import { Projects } from "./Projects/Projects";
 
-interface ContentProps{
+interface ContentProps {
     activeContent: string;
+    updateActiveContent: any;
 }
 
-export function Content({ activeContent }: ContentProps) {
-    return(
+export function Content({ activeContent, updateActiveContent }: ContentProps) {
+    return (
         <div className="flex items-center content-center justify-center flex-1">
             {
                 activeContent === 'About Me'
-                ?
-                <AboutMe/>
-                :
-                activeContent === 'Projects'
-                ?
-                <Projects/>
-                :
-                <Contacts/>
+                    ?
+                    <AboutMe updateActiveContent={updateActiveContent}/>
+                    :
+                    activeContent === 'Projects'
+                        ?
+                        <Projects />
+                        :
+                        <Contacts />
             }
         </div>
     )

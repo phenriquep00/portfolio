@@ -33,9 +33,6 @@ export function Header({ activeContent, updateActiveContent }: headerProps) {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    useEffect(() => {
-
-    }, [activeNavbarItem])
 
     return (
         <header className="flex flex-row justify-between w-full h-[7%]  text-white ">
@@ -87,7 +84,7 @@ export function Header({ activeContent, updateActiveContent }: headerProps) {
                             <Navbar>
                                 {
                                     navbarItems.map(({ id, title }: NavbarItemsProps) => (
-                                        title === activeNavbarItem
+                                        title === activeContent
                                             ?
                                             <NavbarItem active={true} onClick={handleNavbarClick} key={id}>
                                                 <p>{title}</p>
