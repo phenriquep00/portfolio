@@ -6,9 +6,8 @@ export function AboutMe() {
             About Me
             <div className="flex flex-row gap-3">
                 <Button type={"p"} onClick={null}> Check Projects</Button>
-                <Button type={"s"} onClick={null}> contacts</Button>
+                <Button type={"s"} onClick={null}> Contacts</Button>
             </div>
-
         </div>
     )
 }
