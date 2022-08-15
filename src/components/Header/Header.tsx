@@ -7,7 +7,7 @@ import { NavbarItem } from "../Navbar/NavbarItem";
 import { HeaderMenu } from "./HeaderMenu";
 import { navbarItems, NavbarItemsProps } from "../../data";
 
-interface headerProps{
+interface headerProps {
     activeContent: string;
     updateActiveContent: any;
 }
@@ -49,18 +49,20 @@ export function Header({ activeContent, updateActiveContent }: headerProps) {
                             null
                     }
                 </Logo>
+                <a href="https://github.com/phenriquep00" target={"_blank"}>
+                    <Button type="t" onClick={null}>
+                        <GithubLogo weight="fill" size={20} className="mr-1" />
+                        {
+                            windowDimensions.width > 600 && windowDimensions.height > 800
+                                ?
+                                <p>Github</p>
+                                :
+                                null
+                        }
 
-                <Button type="t" onClick={null}>
-                    <GithubLogo weight="fill" size={20} className="mr-1" />
-                    {
-                        windowDimensions.width > 600 && windowDimensions.height > 800
-                            ?
-                            <p>Github</p>
-                            :
-                            null
-                    }
+                    </Button>
+                </a>
 
-                </Button>
 
                 <Button type="t" onClick={null}>
                     <LinkedinLogo weight="fill" size={20} className="mr-1" />
