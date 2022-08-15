@@ -10,7 +10,7 @@ export function Content({ activeContent }: ContentProps) {
     return(
         <div className="flex items-center content-center justify-center flex-1">
             {
-                activeContent === 'About me'
+                activeContent === 'About Me'
                 ?
                 <AboutMe/>
                 :
