@@ -4,6 +4,7 @@ import { PropsWithChildren } from 'react';
 type ButtonProps = PropsWithChildren<{
     type: string;
     onClick: any;
+    color: string;
 }>
 
 export function Button({ children, type, onClick }: ButtonProps) {
