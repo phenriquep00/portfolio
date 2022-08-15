@@ -62,15 +62,15 @@ export function Header() {
                         ?
                         (
                             <div className="flex flex-row gap-4 justify-start items-center">
-                                <Navbar onClick={null}>
+                                <Navbar active={true} onClick={null}>
                                     <p>About me</p>
                                 </Navbar>
 
-                                <Navbar onClick={null}>
+                                <Navbar active={false} onClick={null}>
                                     <p>Projects</p>
                                 </Navbar>
 
-                                <Navbar onClick={null}>
+                                <Navbar active={false} onClick={null}>
                                     <p>Contacts</p>
                                 </Navbar>
                             </div>
