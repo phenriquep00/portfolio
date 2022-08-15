@@ -7,15 +7,21 @@ import { NavbarItem } from "../Navbar/NavbarItem";
 import { HeaderMenu } from "./HeaderMenu";
 import { navbarItems, NavbarItemsProps } from "../../data";
 
-export function Header() {
+interface headerProps{
+    activeContent: string;
+    updateActiveContent: any;
+}
+
+export function Header({ activeContent, updateActiveContent }: headerProps) {
 
     const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-    const [activeNavbarItem, setActiveNavbarItem] = useState('About Me')
+    const [activeNavbarItem, setActiveNavbarItem] = useState(activeContent)
 
     const handleNavbarClick = (
         e: React.MouseEvent<HTMLInputElement>
     ) => {
         setActiveNavbarItem(e.currentTarget.innerText)
+        updateActiveContent(e.currentTarget.innerText)
     }
 
     useEffect(() => {
@@ -26,6 +32,10 @@ export function Header() {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+
+    }, [activeNavbarItem])
 
     return (
         <header className="flex flex-row justify-between w-full h-[7%]  text-white ">
