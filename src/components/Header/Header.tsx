@@ -12,8 +12,10 @@ export function Header() {
     const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
     const [activeNavbarItem, setActiveNavbarItem] = useState('About Me')
 
-    const handleNavbarClick = () => {
-
+    const handleNavbarClick = (
+        e: React.MouseEvent<HTMLInputElement>
+    ) => {
+        setActiveNavbarItem(e.currentTarget.innerText)
     }
 
     useEffect(() => {
@@ -68,7 +70,7 @@ export function Header() {
                     windowDimensions.width > 600 && windowDimensions.height > 800
                         ?
                         (
-                            <Navbar >
+                            <Navbar>
                                 {
                                     navbarItems.map(({ id, title }: NavbarItemsProps) => (
                                         title === activeNavbarItem
@@ -86,19 +88,21 @@ export function Header() {
                         )
                         :
                         <HeaderMenu>
-                            <Navbar >
-                                <NavbarItem active={true} onClick={handleNavbarClick}>
-                                    <p>About me</p>
-                                </NavbarItem>
-
-                                <NavbarItem active={false} onClick={handleNavbarClick}>
-                                    <p>Projects</p>
-                                </NavbarItem>
-
-                                <NavbarItem active={false} onClick={handleNavbarClick}>
-                                    <p>Contacts</p>
-                                </NavbarItem>
-                            </Navbar>
+                            <div className="flex flex-col gap-4 justify-start items-center">
+                                {
+                                    navbarItems.map(({ id, title }: NavbarItemsProps) => (
+                                        title === activeNavbarItem
+                                            ?
+                                            <NavbarItem active={true} onClick={handleNavbarClick} key={id}>
+                                                <p>{title}</p>
+                                            </NavbarItem>
+                                            :
+                                            <NavbarItem active={false} onClick={handleNavbarClick} key={id}>
+                                                <p>{title}</p>
+                                            </NavbarItem>
+                                    ))
+                                }
+                            </div>
                         </HeaderMenu>
                 }
             </div>
