@@ -23,7 +23,7 @@ export function AboutMe({ updateActiveContent }: AboutMeProps) {
                 - working technologies
                 - something interesting
             */}
-            <div className="flex flex-row gap-3">
+            <div className="flex flex-row gap-3 w-80 h-16">
                 <Button type={"p"} onClick={updateCurrent}>Projects</Button>
                 <Button type={"s"} onClick={updateCurrent}>Contacts</Button>
             </div>
