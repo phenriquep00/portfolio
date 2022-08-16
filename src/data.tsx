@@ -18,3 +18,20 @@ export const navbarItems: NavbarItemsProps[] = [
         title: 'Contacts',
     },
 ]
+
+// projects data
+export interface ProjectsProps {
+    id: number;
+    name: string;
+    img: string;
+    description: string;
+}
+
+export const ProjectsData: ProjectsProps[] = [
+    {
+        id: 0,
+        name: 'test1',
+        img: 'test1.png',
+        description: 'test1 description',
+    }
+]
