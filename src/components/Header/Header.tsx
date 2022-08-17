@@ -102,7 +102,7 @@ export function Header({ activeContent, updateActiveContent }: headerProps) {
                             <div className="flex flex-col gap-4 justify-start items-center">
                                 {
                                     navbarItems.map(({ id, title }: NavbarItemsProps) => (
-                                        title === activeNavbarItem
+                                        title === activeContent
                                             ?
                                             <NavbarItem active={true} onClick={handleNavbarClick} key={id}>
                                                 <p>{title}</p>
