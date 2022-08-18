@@ -27,7 +27,7 @@ export function AboutMe({ updateActiveContent }: AboutMeProps) {
             {/* 
                 what do I want in the about me section?
                 - greeting message [X]
-                - working technologies
+                - working technologies [?]
                 - something interesting
             */}
             <div className="flex flex-row gap-3 md:w-80 md:h-16">
