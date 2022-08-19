@@ -1,7 +1,13 @@
+import { CarrouselDescription } from "./CarrouselDescription";
+
 export function Carrousel() {
     return (
         <div>
-            Carrousel
+            <div>
+                <CarrouselDescription></CarrouselDescription>
+                <CarrouselImage/>
+            </div>
+            <CarrouselSlider></CarrouselSlider>
         </div>
     )
 }
