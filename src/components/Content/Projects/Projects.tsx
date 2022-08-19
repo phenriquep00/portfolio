@@ -1,22 +1,18 @@
 import { ProjectsData, ProjectsProps } from '../../../data'
+import { Carrousel } from '../../Carrousel/Carrousel'
 
 
 export function Projects() {
     return (
-        <div>
-            Projects
+        <div className='bg-white flex flex-1 items-center justify-center w-fill h-fill'>
 
-        {/* 
-            what do I want in the projects section?
-            display projects in a nice way
-            
-        */}
+            <Carrousel></Carrousel>
 
-            {
+            {/* {
                 ProjectsData.map(({ id, name }: ProjectsProps) => (
                     <p key={id}>{name}</p>
                 ))
-            }
+            } */}
         </div>
     )
 }
