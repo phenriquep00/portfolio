@@ -4,8 +4,8 @@ import { CarrouselSlider } from "./CarrouselSlider";
 
 export function Carrousel() {
     return (
-        <div className="flex flex-col flex-1 items-center">
-            <div className="flex flex-row justify-around w-screen">
+        <div className="text-white w-full h-full flex flex-col items-center justify-center">
+            <div className="flex md:flex-row flex-col gap-2">
                 <CarrouselDescription></CarrouselDescription>
                 <CarrouselImage/>
             </div>

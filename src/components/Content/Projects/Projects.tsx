@@ -4,7 +4,7 @@ import { Carrousel } from '../../Carrousel/Carrousel'
 
 export function Projects() {
     return (
-        <div className='bg-white flex flex-1 items-center justify-center w-fill h-fill'>
+        <div className='flex flex-col items-center w-full h-full justify-center'>
 
             <Carrousel></Carrousel>
 

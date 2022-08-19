@@ -12,6 +12,14 @@ interface headerProps {
     updateActiveContent: any;
 }
 
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+        width,
+        height
+    };
+}
+
 export function Header({ activeContent, updateActiveContent }: headerProps) {
 
     const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
@@ -123,10 +131,3 @@ export function Header({ activeContent, updateActiveContent }: headerProps) {
     )
 }
 
-function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-        width,
-        height
-    };
-}

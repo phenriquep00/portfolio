@@ -1,6 +1,6 @@
 export function CarrouselDescription() {
     return (
-        <div className="bg-gray-600 w-[40%]">
+        <div className="bg-black">
             Carrousel Description
         </div>
     )

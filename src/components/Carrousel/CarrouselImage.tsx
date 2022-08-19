@@ -1,6 +1,6 @@
 export function CarrouselImage() {
     return (
-        <div className="w-[55%] h-[500px] bg-black text-white">
+        <div className="bg-black">
             <img src="#" alt="project img" />
             Carrousel Image
         </div>
