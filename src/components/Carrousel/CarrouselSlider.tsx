@@ -1,6 +1,6 @@
 export function CarrouselSlider() {
     return (
-        <div>
+        <div className="bg-white bg-opacity-40">
             Carrousel Slider
         </div>
     )
