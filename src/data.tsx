@@ -51,43 +51,43 @@ export const projectsData: ProjectsProps[] = [
         thumb: 'thumb.png'
     },
     {
-        id: 2,
-        name: 'test3',
+        id: 3,
+        name: 'test4',
         img: 'test3.png',
         description: 'test3 description',
         thumb: 'thumb.png'
     },
     {
-        id: 2,
-        name: 'test3',
+        id: 4,
+        name: 'test5',
         img: 'test3.png',
         description: 'test3 description',
         thumb: 'thumb.png'
     },
     {
-        id: 2,
-        name: 'test3',
+        id: 5,
+        name: 'test6',
         img: 'test3.png',
         description: 'test3 description',
         thumb: 'thumb.png'
     },
     {
-        id: 2,
-        name: 'test3',
+        id: 6,
+        name: 'test7',
         img: 'test3.png',
         description: 'test3 description',
         thumb: 'thumb.png'
     },
     {
-        id: 2,
-        name: 'test3',
+        id: 7,
+        name: 'test8',
         img: 'test3.png',
         description: 'test3 description',
         thumb: 'thumb.png'
     },
     {
-        id: 2,
-        name: 'test3',
+        id: 8,
+        name: 'test9',
         img: 'test3.png',
         description: 'test3 description',
         thumb: 'thumb.png'
