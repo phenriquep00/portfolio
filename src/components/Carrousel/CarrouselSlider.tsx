@@ -1,15 +1,16 @@
 import { CarrouselSliderCard } from "./CarrouselSliderCard";
 import { projectsData, ProjectsProps } from "../../data";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from 'framer-motion';
 
 
 export function CarrouselSlider() {
 
     const [width, setWidth] = useState(0);
-    const [activeId, setActiveId] = useState(0)
+
 
     const carrousel = useRef<HTMLDivElement>(null);
+    
 
     useEffect(() => {
         if (carrousel.current?.scrollWidth != undefined && carrousel.current?.offsetWidth != undefined) {
@@ -22,12 +23,7 @@ export function CarrouselSlider() {
             <motion.div drag='x' dragConstraints={{ right: 0, left: -width }} className="flex gap-3 px-2">
                 {
                     projectsData.map(({ id, name, thumb }: ProjectsProps) => (
-
-                        id === activeId
-                            ?
-                            <CarrouselSliderCard key={id} text={name} active={true} />
-                            :
-                            <CarrouselSliderCard key={id} text={name} active={false} />
+                            <CarrouselSliderCard key={id} text={name} />
                     ))
                 }
             </motion.div>
