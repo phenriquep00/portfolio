@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-
+import { motion } from 'framer-motion';
 
 type ButtonProps = PropsWithChildren<{
     type: string;
@@ -8,12 +8,13 @@ type ButtonProps = PropsWithChildren<{
 
 export function Button({ children, type, onClick }: ButtonProps) {
     return (
-        <div
+        <motion.div
             onClick={onClick}
+            whileHover={{scale: 1.1}}
             className={
                 type.startsWith("p")
                     ? // primary button style
-                    'flex flex-1 flex-row items-center justify-center bg-emerald-500 text-white font-semibold p-2 rounded-md w-auto h-auto hover:cursor-pointer hover:bg-emerald-600 hover:ring-2 ring-offset-1 transition-colors duration-200'
+                    'flex flex-1 flex-row items-center justify-center bg-gradient-to-b from-emerald-600 to-emerald-300 text-white font-semibold p-2 rounded-md w-auto h-auto hover:cursor-pointer ring-emerald-700 hover:bg-emerald-400 hover:ring-2 ring-offset-1 transition-colors duration-200'
                     :
                     type.startsWith("s")
                         ? // secondary button style
@@ -27,6 +28,6 @@ export function Button({ children, type, onClick }: ButtonProps) {
             }
         >
             {children}
-        </div>
+        </motion.div>
     )
 }

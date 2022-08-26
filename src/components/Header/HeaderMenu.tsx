@@ -1,6 +1,7 @@
 import { List } from "phosphor-react";
 import { PropsWithChildren, useState } from "react";
 import { Button } from "../Button/Button";
+import { motion } from 'framer-motion';
 
 type HeaderMenuProps = PropsWithChildren<{
 
@@ -21,9 +22,11 @@ export function HeaderMenu({ children }: HeaderMenuProps) {
                     headerMenuActive ? children : null
                 }
             </div>
-
-            <List size={24} weight="bold" className="z-20"/>
-
+            <motion.div whileTap={{ rotate: 90 }} className='z-20'>
+                <List size={24} weight="bold" className="z-20" />
+            </motion.div>
         </Button>
+
+
     )
 }
