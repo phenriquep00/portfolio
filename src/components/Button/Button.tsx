@@ -14,7 +14,7 @@ export function Button({ children, type, onClick }: ButtonProps) {
             className={
                 type.startsWith("p")
                     ? // primary button style
-                    'flex flex-1 flex-row items-center justify-center bg-emerald-500 text-white font-semibold p-2 rounded-md w-auto h-auto hover:cursor-pointer ring-emerald-700 hover:bg-emerald-400 hover:ring-2 ring-offset-1 transition-colors duration-200'
+                    'flex flex-1 flex-row items-center justify-center bg-emerald-500 text-white font-semibold p-2 rounded-md w-auto h-auto hover:cursor-pointer ring-emerald-700 hover:bg-emerald-400 hover:ring-4 ring-offset-1 transition-colors duration-200'
                     :
                     type.startsWith("s")
                         ? // secondary button style
