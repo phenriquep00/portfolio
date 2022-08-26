@@ -6,7 +6,7 @@ interface CarrouselImageProps {
 export function CarrouselImage({ image }: CarrouselImageProps) {
     return (
         <div className="bg-black flex flex-col gap-2">
-            <img src={image} alt="project img" />
+            <img src='' alt="project img" />
             {image}
         </div>
     )
