@@ -1,7 +1,11 @@
-export function CarrouselDescription() {
+interface CarrouselDescriptionProps {
+    description: string;
+}
+
+export function CarrouselDescription({ description }: CarrouselDescriptionProps) {
     return (
         <div className="bg-black">
-            Carrousel Description
+            {description}
         </div>
     )
 }

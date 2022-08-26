@@ -27,7 +27,7 @@ export function Carrousel() {
     return (
         <div className="text-white w-full h-full flex flex-col items-center justify-center">
             <div className="flex md:flex-row flex-col gap-2">
-                <CarrouselDescription ></CarrouselDescription>
+                <CarrouselDescription description={activeProject.description}></CarrouselDescription>
                 <CarrouselImage image={activeProject.img} />
             </div>
             <CarrouselSlider updateActive={updateActive} data={projectsData} act={activeId}></CarrouselSlider>
