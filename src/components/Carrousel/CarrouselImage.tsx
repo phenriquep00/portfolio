@@ -1,8 +1,13 @@
-export function CarrouselImage() {
+interface CarrouselImageProps {
+    image: string;
+}
+
+
+export function CarrouselImage({ image }: CarrouselImageProps) {
     return (
-        <div className="bg-black">
-            <img src="#" alt="project img" />
-            Carrousel Image
+        <div className="bg-black flex flex-col gap-2">
+            <img src={image} alt="project img" />
+            {image}
         </div>
     )
 }

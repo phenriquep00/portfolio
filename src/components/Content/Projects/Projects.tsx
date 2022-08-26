@@ -1,4 +1,4 @@
-import { ProjectsData, ProjectsProps } from '../../../data'
+import { projectsData, ProjectsProps } from '../../../data'
 import { Carrousel } from '../../Carrousel/Carrousel'
 
 
