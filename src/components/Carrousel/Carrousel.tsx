@@ -10,7 +10,6 @@ export function Carrousel() {
 
     const [activeProject, setActiveProject] = useState(projectsData[0])
     const [activeId, setActiveId] = useState(activeProject.id)
-    const [image, setImage] = useState(activeProject.img)
 
     const updateActive = (a: SetStateAction<number>) => {
         setActiveId(a)
@@ -20,7 +19,6 @@ export function Carrousel() {
         projectsData.map((project) => {
             if (project.id == activeId) {
                 setActiveProject(project)
-                setImage(project.img)
             }
         })
         
@@ -29,8 +27,8 @@ export function Carrousel() {
     return (
         <div className="text-white w-full h-full flex flex-col items-center justify-center">
             <div className="flex md:flex-row flex-col gap-2">
-                <CarrouselDescription></CarrouselDescription>
-                <CarrouselImage image={image} />
+                <CarrouselDescription ></CarrouselDescription>
+                <CarrouselImage image={activeProject.img} />
             </div>
             <CarrouselSlider updateActive={updateActive} data={projectsData} act={activeId}></CarrouselSlider>
         </div>
