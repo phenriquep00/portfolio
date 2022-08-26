@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Button } from "../../Button/Button";
 
 interface AboutMeProps {
@@ -13,7 +14,16 @@ export function AboutMe({ updateActiveContent }: AboutMeProps) {
     }
 
     return (
-        <div className="text-[#FDEAD4]">
+        <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 20
+            }}
+            className="text-[#FDEAD4]"
+        >
 
             <div className="flex flex-col gap-4 py-6 ml-3 md:ml-0">
                 <h1 className="md:text-8xl font-medium text-4xl">Hi there!</h1>
@@ -34,6 +44,6 @@ export function AboutMe({ updateActiveContent }: AboutMeProps) {
                 <Button type={"p"} onClick={updateCurrent}>Projects</Button>
                 <Button type={"s"} onClick={updateCurrent}>Contacts</Button>
             </div>
-        </div>
+        </motion.div>
     )
 }

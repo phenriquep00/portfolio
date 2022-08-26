@@ -3,6 +3,7 @@ import { CarrouselDescription } from "./CarrouselDescription";
 import { CarrouselImage } from "./CarrouselImage";
 import { CarrouselSlider } from "./CarrouselSlider";
 import { projectsData, ProjectsProps } from "../../data";
+import { motion } from "framer-motion";
 
 // TODO: Change the color of the background based on the main color of the image
 
@@ -26,10 +27,22 @@ export function Carrousel() {
 
     return (
         <div className="text-white w-full h-full flex flex-col items-center justify-center">
-            <div className="flex md:flex-row flex-col gap-2">
+
+            <motion.div
+                key={activeId}
+                initial={{ scale: 0, }}
+                animate={{ scale: 1 }}
+                transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20
+                }}
+                className="flex md:flex-row flex-col gap-2"
+            >
                 <CarrouselDescription description={activeProject.description}></CarrouselDescription>
                 <CarrouselImage image={activeProject.img} />
-            </div>
+            </motion.div>
+
             <CarrouselSlider updateActive={updateActive} data={projectsData} act={activeId}></CarrouselSlider>
         </div>
     )
