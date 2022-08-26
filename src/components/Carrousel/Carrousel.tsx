@@ -21,7 +21,7 @@ export function Carrousel() {
                 setActiveProject(project)
             }
         })
-        
+
     }, [activeId])
 
     return (

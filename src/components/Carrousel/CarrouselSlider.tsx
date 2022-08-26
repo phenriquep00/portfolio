@@ -18,7 +18,6 @@ export function CarrouselSlider({ updateActive, data, act }: CarrouselSliderProp
 
     const handleCardClick = (e: React.MouseEvent<HTMLDivElement>) => {
         setActive(parseInt(e.currentTarget.innerText));
-        
     }
 
     useEffect(() => {
@@ -36,7 +35,7 @@ export function CarrouselSlider({ updateActive, data, act }: CarrouselSliderProp
             <motion.div drag='x' dragConstraints={{ right: 0, left: -width }} className="flex gap-3 px-2">
                 {
                     data.map(({ id }) => (
-                        <CarrouselSliderCard key={id} text={id} onClick={handleCardClick}/>
+                        <CarrouselSliderCard key={id} text={id} onClick={handleCardClick} />
                     ))
                 }
             </motion.div>
