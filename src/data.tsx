@@ -93,3 +93,6 @@ export const projectsData: ProjectsProps[] = [
         thumb: 'thumb.png'
     },
 ]
+
+
+// TODO: create variables for the images 
