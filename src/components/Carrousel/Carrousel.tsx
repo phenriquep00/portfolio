@@ -30,12 +30,10 @@ export function Carrousel() {
 
             <motion.div
                 key={activeId}
-                initial={{ scale: 0, }}
-                animate={{ scale: 1 }}
+                initial={{ opacity: 0, }}
+                animate={{ opacity: 1 }}
                 transition={{
-                    type: "spring",
-                    stiffness: 260,
-                    damping: 20
+                    duration: 1
                 }}
                 className="flex md:flex-row flex-col gap-2"
             >

@@ -1,12 +1,15 @@
 import { motion } from 'framer-motion';
 import { X } from 'phosphor-react';
-import { PropsWithChildren, useState } from 'react';
+import { PropsWithChildren, ReactElement, useState } from 'react';
 
 type CardProps = PropsWithChildren<{
-    title: string;
+    title: ReactElement<HTMLParagraphElement>;
 }>
 
-
+/* TODO:
+    find a way to make it more acessible to smaller screens
+    
+*/
 export function Card({ title, children }: CardProps) {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +27,7 @@ export function Card({ title, children }: CardProps) {
             onClick={() => { setIsOpen(!isOpen) }}
             style={{ borderRadius: '1rem', boxShadow: '0px 10px 30px rgba(0,0,0,0.5)' }}
         >
-            <motion.h2 layout="position" className='flex items-center justify-between cursor-pointer'>
+            <motion.h2 layout="position" className='flex items-center justify-between cursor-pointer flex-row'>
                 {title}
                 {
                     isOpen &&
@@ -41,7 +44,7 @@ export function Card({ title, children }: CardProps) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: .7 }}
-                    className='pt-4 leading-[150%] w-[30rem]'
+                    className='pt-4 leading-[150%] md:w-[24rem] w-[6rem]'
                 >
                     {children}
                 </motion.div>
