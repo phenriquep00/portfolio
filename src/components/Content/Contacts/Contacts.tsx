@@ -1,5 +1,4 @@
-
-
+import { Card } from "../../Card/Card";
 
 export function Contacts() {
 
@@ -7,6 +6,8 @@ export function Contacts() {
         <div>
 
         contacts
+        <Card />
+        <Card />
 
         </div>
     )
