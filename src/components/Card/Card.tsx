@@ -1,8 +1,13 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { X } from 'phosphor-react';
+import { PropsWithChildren, useState } from 'react';
+
+type CardProps = PropsWithChildren<{
+    title: string;
+}>
 
 
-export function Card() {
+export function Card({ title, children }: CardProps) {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -19,20 +24,26 @@ export function Card() {
             onClick={() => { setIsOpen(!isOpen) }}
             style={{ borderRadius: '1rem', boxShadow: '0px 10px 30px rgba(0,0,0,0.5)' }}
         >
-            <motion.h2 layout="position">
-                Title
+            <motion.h2 layout="position" className='flex items-center justify-between cursor-pointer'>
+                {title}
+                {
+                    isOpen &&
+                    <div className='rounded-full border-2 p-1 border-gray-400 text-gray-400 cursor-pointer'>
+                        <X weight='bold'/>
+                    </div>
+                    
+                }
             </motion.h2>
 
             {
                 isOpen &&
                 <motion.div
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    transition={{duration: 1}}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: .7 }}
                     className='pt-4 leading-[150%] w-[30rem]'
                 >
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugit modi sed perspiciatis deleniti laborum rerum quis. Assumenda, tempore praesentium! Nulla magnam at mollitia expedita. Quibusdam sequi temporibus voluptas praesentium.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sequi alias officiis a sunt eius eos! Impedit nobis aut sequi sit praesentium amet fuga, blanditiis iste, incidunt, ut quo doloribus.</p>
+                    {children}
                 </motion.div>
             }
 
