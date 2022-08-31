@@ -96,3 +96,6 @@ export const projectsData: ProjectsProps[] = [
 
 
 // TODO: create variables for the images 
+// a imge array for the background images
+// and a image array for the thumb nails
+// all of them inside another array
