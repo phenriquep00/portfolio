@@ -25,7 +25,7 @@ export function AboutMe({ updateActiveContent }: AboutMeProps) {
             className="text-[#FDEAD4]"
         >
 
-            <div className="flex flex-col gap-4 py-6 ml-3 md:ml-0">
+            <div className="flex flex-col gap-4 py-6 mx-3 md:ml-0">
                 <h1 className="md:text-8xl font-medium text-4xl">Hi there!</h1>
                 <div className="text-[#EEDCFD] gap-1 flex flex-col">
                     <h2 className="md:text-6xl font-normal text-2xl">I'm Pedro Henrique</h2>
