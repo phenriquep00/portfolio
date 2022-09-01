@@ -23,11 +23,11 @@ export function Card({ title, children }: CardProps) {
                     type: 'spring'
                 }
             }}
-            className='bg-white p-6'
+            className='bg-white p-6 cursor-pointer'
             onClick={() => { setIsOpen(!isOpen) }}
             style={{ borderRadius: '1rem', boxShadow: '0px 10px 30px rgba(0,0,0,0.5)' }}
         >
-            <motion.h2 layout="position" className='flex items-center justify-between cursor-pointer flex-row'>
+            <motion.h2 layout="position" className='flex items-center justify-between  flex-row'>
                 {title}
                 {
                     isOpen &&
