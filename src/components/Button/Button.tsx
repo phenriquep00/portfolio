@@ -18,7 +18,7 @@ export function Button({ children, type, onClick }: ButtonProps) {
                     :
                     type.startsWith("s")
                         ? // secondary button style
-                        'flex flex-1 flex-row items-center justify-center border-2 border-emerald-400 text-emerald-400 font-bold p-[6px] rounded-md w-auto h-auto hover:cursor-pointer hover:border-emerald-200 hover:text-emerald-200 transition-colors duration-200'
+                        'flex flex-1 flex-row items-center justify-center border-2 border-emerald-400 text-emerald-400 font-bold p-[6px] rounded-md w-auto h-auto hover:cursor-pointer hover:border-emerald-200 transition-colors duration-200 hover:bg-emerald-400 hover:text-white'
                         :
                         type.startsWith("t")
                             ? // tertiary button style
