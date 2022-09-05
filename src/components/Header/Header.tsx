@@ -86,7 +86,7 @@ export function Header({ activeContent, updateActiveContent }: headerProps) {
             <div className="flex flex-row gap-4 md:pr-10 pr-4 justify-start items-center">
 
                 {
-                    windowDimensions.width > 600 
+                    windowDimensions.width > 600
                         ?
                         (
                             <Navbar>
@@ -124,9 +124,8 @@ export function Header({ activeContent, updateActiveContent }: headerProps) {
                             </div>
                         </HeaderMenu>
                 }
-                
-            </div>
 
+            </div>
         </header>
     )
 }

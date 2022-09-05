@@ -4,7 +4,6 @@ import { Card } from "../../Card/Card";
 
 export function Contacts() {
 
-
     return (
         <div className="flex flex-col w-full h-full items-center justify-center gap-4 md:text-lg">
 

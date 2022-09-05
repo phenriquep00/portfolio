@@ -34,12 +34,6 @@ export function AboutMe({ updateActiveContent }: AboutMeProps) {
 
             </div>
 
-            {/* 
-                what do I want in the about me section?
-                - greeting message [X]
-                - working technologies [?]
-                - something interesting
-            */}
             <div className="flex flex-row gap-3 md:w-80 md:h-16">
                 <Button type={"p"} onClick={updateCurrent}>Projects</Button>
                 <Button type={"s"} onClick={updateCurrent}>Contacts</Button>
