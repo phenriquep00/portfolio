@@ -3,7 +3,7 @@ import { Switch } from '@headlessui/react'
 import { ThemeContext } from '../../hooks/ThemeContext';
 import { Moon, Sun } from 'phosphor-react';
 
-export default function Toggle() {
+export default function ThemeSwitch() {
     const { theme, setTheme } = useContext(ThemeContext);
     const [enabled, setEnabled] = useState(false)
 

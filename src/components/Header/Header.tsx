@@ -6,6 +6,7 @@ import { Navbar } from "../Navbar/Navbar";
 import { NavbarItem } from "../Navbar/NavbarItem";
 import { HeaderMenu } from "./HeaderMenu";
 import { navbarItems, NavbarItemsProps } from "../../data";
+import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 
 interface headerProps {
     activeContent: string;
@@ -84,6 +85,7 @@ export function Header({ activeContent, updateActiveContent }: headerProps) {
             </div>
 
             <div className="flex flex-row gap-4 md:pr-10 pr-4 justify-start items-center">
+                <ThemeSwitch />
 
                 {
                     windowDimensions.width > 600

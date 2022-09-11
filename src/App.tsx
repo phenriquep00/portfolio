@@ -1,8 +1,12 @@
+import { ThemeProvider } from "./hooks/ThemeContext";
 import { HomePage } from "./pages/HomePage/HomePage";
 
 export function App() {
 
   return (
-    <HomePage />
+    <ThemeProvider initialTheme={''}>
+      <HomePage />
+    </ThemeProvider>
+
   )
 }
