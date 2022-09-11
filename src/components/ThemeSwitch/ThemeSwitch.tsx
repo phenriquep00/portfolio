@@ -8,7 +8,7 @@ export default function ThemeSwitch() {
     const [enabled, setEnabled] = useState(false)
 
     return (
-        <div className="mr-4" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+        <div className="mr-4 " onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
             <Switch
                 checked={enabled}
                 onChange={setEnabled}

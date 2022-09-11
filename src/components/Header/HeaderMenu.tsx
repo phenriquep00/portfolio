@@ -22,8 +22,8 @@ export function HeaderMenu({ children }: HeaderMenuProps) {
                     headerMenuActive ? children : null
                 }
             </div>
-            <motion.div whileTap={{ rotate: 90 }} className='z-20'>
-                <List size={24} weight="bold" className="z-20" />
+            <motion.div whileTap={{ rotate: 90 }} className='z-50'>
+                <List size={24} weight="bold" className="z-50" />
             </motion.div>
         </Button>
 

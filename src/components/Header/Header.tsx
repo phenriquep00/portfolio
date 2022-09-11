@@ -109,7 +109,7 @@ export function Header({ activeContent, updateActiveContent }: headerProps) {
                         )
                         :
                         <HeaderMenu>
-                            <div className="flex flex-col gap-4 justify-start items-center">
+                            <div className="flex flex-col gap-4 justify-start items-center pt-10">
                                 {
                                     navbarItems.map(({ id, title }: NavbarItemsProps) => (
                                         title === activeContent
