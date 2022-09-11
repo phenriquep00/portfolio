@@ -1,3 +1,46 @@
+.dark {
+    --color-bg-primary: #2A2338;
+    --color-bg-secondary: #544670;
+
+    --color-button-primary: #10b981;
+    --color-button-secondary: #34d399;
+    --color-button-tertiary: #10b981;
+
+    --color-text-primary: #FDEAD4;
+    --color-text-secondary: #EEDCFD;
+    --color-text-highligthed-primary: #34d399;
+    --color-text-highligthed-secondary: #ea580c;
+
+    
+    --color-border-primary: #34d399;
+    --color-border-secondary: #a7f3d0;
+
+    --color-ring-primary: #047857;
+
+
+}
+
+.light {
+    --color-bg-primary: #BFB6D1;
+    --color-bg-secondary: #544670;
+    
+    --color-button-primary: #581c87;
+    --color-button-secondary: #7e22ce;
+    --color-button-tertiary: #a855f7;
+    
+    --color-text-primary: #312B2B;
+    --color-text-secondary: #120220;
+    --color-text-highligthed-primary:#7e22ce ;
+    --color-text-highligthed-secondary: #ea580c;
+
+    --color-border-primary: #7e22ce;
+    --color-border-secondary: #a855f7;
+
+    --color-ring-primary: #6d28d9;
+}
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

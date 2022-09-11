@@ -22,12 +22,12 @@ export function AboutMe({ updateActiveContent }: AboutMeProps) {
                 stiffness: 260,
                 damping: 20
             }}
-            className="text-[#FDEAD4]"
+            className="text-primary"
         >
 
             <div className="flex flex-col gap-4 py-6 mx-3 md:ml-0">
                 <h1 className="md:text-8xl font-medium text-4xl">Hi there!</h1>
-                <div className="text-[#EEDCFD] gap-1 flex flex-col">
+                <div className="text-secondary gap-1 flex flex-col">
                     <h2 className="md:text-6xl font-normal text-2xl">I'm Pedro Henrique</h2>
                     <h3 className="md:text-3xl text-xl">Software Student and Technology enthusiast</h3>
                 </div>

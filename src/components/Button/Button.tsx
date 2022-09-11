@@ -14,15 +14,15 @@ export function Button({ children, type, onClick }: ButtonProps) {
             className={
                 type.startsWith("p")
                     ? // primary button style
-                    'flex flex-1 flex-row items-center justify-center bg-emerald-500 text-white font-semibold p-2 rounded-md w-auto h-auto hover:cursor-pointer ring-emerald-700 hover:bg-emerald-400 hover:ring-4 ring-offset-1 transition-colors duration-200'
+                    'flex flex-1 flex-row items-center justify-center bg-buttonPrimary text-white font-semibold p-2 rounded-md w-auto h-auto hover:cursor-pointer ring-primary hover:bg-buttonSecondary hover:ring-4 ring-offset-1 transition-colors duration-200'
                     :
                     type.startsWith("s")
                         ? // secondary button style
-                        'flex flex-1 flex-row items-center justify-center border-2 border-emerald-400 text-emerald-400 font-bold p-[6px] rounded-md w-auto h-auto hover:cursor-pointer hover:border-emerald-200 transition-colors duration-200 hover:bg-emerald-400 hover:text-white'
+                        'flex flex-1 flex-row items-center justify-center border-2 border-primary text-highlightedPrimary font-bold p-[6px] rounded-md w-auto h-auto hover:cursor-pointer hover:border-secondary transition-colors duration-200 hover:bg-buttonSecondary hover:text-white'
                         :
                         type.startsWith("t")
                             ? // tertiary button style
-                            'flex flex-1 flex-row items-center justify-center text-emerald-400 font-semibold p-2 w-auto h-auto hover:cursor-pointer hover:text-emerald-600 transition-colors duration-200'
+                            'flex flex-1 flex-row items-center justify-center text-highlightedPrimary font-semibold p-2 w-auto h-auto hover:cursor-pointer hover:opacity-70 transition-colors duration-200'
                             :
                             ''
             }

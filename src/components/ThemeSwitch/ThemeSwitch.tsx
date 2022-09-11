@@ -12,7 +12,7 @@ export default function ThemeSwitch() {
             <Switch
                 checked={enabled}
                 onChange={setEnabled}
-                className={`${theme === 'dark' ? 'bg-[#AF9BB2]' : 'bg-[#362b38]'}
+                className={`bg-secondary
           relative inline-flex h-[30px] w-[66px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-400 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
             >
                 <span className="sr-only">Use setting</span>
@@ -20,7 +20,7 @@ export default function ThemeSwitch() {
                     aria-hidden="true"
                     className={`${enabled ? 'translate-x-9' : 'translate-x-0'}
             pointer-events-none h-[26px] w-[26px] transform rounded-full 
-            ${theme === 'dark' ? 'bg-[#362b38]' : 'bg-[#AF9BB2]'}
+            bg-primary
              shadow-lg ring-0 transition duration-200 ease-in-out flex items-center justify-center`}
                 >
                     {

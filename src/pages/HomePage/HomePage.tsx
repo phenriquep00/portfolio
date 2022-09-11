@@ -12,7 +12,7 @@ export function HomePage() {
     }
     
     return (
-        <div className="flex flex-col w-screen h-screen bg-[#2A2338]">
+        <div className="flex flex-col w-screen h-screen bg-primary">
             <Header activeContent={activeContent} updateActiveContent={updateActiveContent}/>
             <Content activeContent={activeContent} updateActiveContent={updateActiveContent}/>
         </div>
