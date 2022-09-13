@@ -22,7 +22,7 @@ export function AboutMe({ updateActiveContent }: AboutMeProps) {
                 stiffness: 260,
                 damping: 20
             }}
-            className="text-primary"
+            className="text-primary transition-colors duration-700"
         >
 
             <div className="flex flex-col gap-4 py-6 mx-3 md:ml-0">
