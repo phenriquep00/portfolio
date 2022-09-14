@@ -3,6 +3,8 @@ import { Button } from "../../components/Button/Button";
 import { Content } from "../../components/Content/Content";
 import { Header } from "../../components/Header/Header";
 
+// TODO: use prisma, express, node, sqlite to build the backend
+
 export function HomePage() {
 
     const [activeContent, setActiveContent] = useState('About Me')
