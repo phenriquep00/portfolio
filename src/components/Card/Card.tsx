@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { X } from 'phosphor-react';
+import { Link, X } from 'phosphor-react';
 import { PropsWithChildren, ReactElement, useState } from 'react';
 
 type CardProps = PropsWithChildren<{
@@ -44,8 +44,9 @@ export function Card({ title, children }: CardProps) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: .7 }}
-                    className='pt-4 leading-[150%] md:w-[24rem] w-[6rem]'
+                    className='pt-4 leading-[150%] md:w-[24rem] w-[6rem] underline text-lg flex '
                 >
+                    <Link size={18} />
                     {children}
                 </motion.div>
             }
