@@ -32,9 +32,9 @@ export function Card({ title, children }: CardProps) {
                 {
                     isOpen &&
                     <div className='rounded-full border-2 p-1 border-gray-400 text-gray-400 cursor-pointer'>
-                        <X weight='bold'/>
+                        <X weight='bold' />
                     </div>
-                    
+
                 }
             </motion.h2>
 
