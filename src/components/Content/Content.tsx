@@ -2,6 +2,8 @@ import { AboutMe } from "./AboutMe/AboutMe";
 import { Contacts } from "./Contacts/Contacts";
 import { Projects } from "./Projects/Projects";
 
+//new version
+
 interface ContentProps {
     activeContent: string;
     updateActiveContent: any;
