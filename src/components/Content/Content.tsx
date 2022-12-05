@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Contact } from "../../pages/Contact/Contact";
 import { LandingPage } from "../../pages/LandingPage/LandingPage";
 import { Projects } from "../../pages/Projects/Projects";
