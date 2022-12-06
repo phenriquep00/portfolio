@@ -12,7 +12,7 @@ export function Button({ children, type, onClick }: ButtonProps) {
       className={`flex text-[#feda4a] flex-row items-center justify-center
         ${
           type.startsWith("p")
-            ? "border-2 border-[#feda4a] rounded font-semibold p-2"
+            ? "border-4 border-[#feda4a] rounded font-bold p-2"
             : type.startsWith("s")
             ? "secondary button"
             : "teritiary button"

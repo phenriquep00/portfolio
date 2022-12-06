@@ -2,9 +2,9 @@ import { ArrowClockwise } from "phosphor-react";
 import { useEffect, useState } from "react";
 import { Button } from "../../components/Button/Button";
 import { CrawlText } from "../../components/CrawlText/CrawlText";
-import { Navigator } from "../../components/Navigator/Navigator";
+import { INavigator, Navigator } from "../../components/Navigator/Navigator";
 
-export function LandingPage() {
+export function LandingPage({focusProjects, focusContact}: INavigator) {
   const [showCrawl, setShowCrawl] = useState<boolean>(true);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export function LandingPage() {
           </div>
         </Button>
 
-        <Navigator />
+        <Navigator focusProjects={focusProjects} focusContact={focusContact}/>
       </div>
     </div>
   );

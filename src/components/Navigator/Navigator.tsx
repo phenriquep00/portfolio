@@ -1,13 +1,18 @@
 import { Button } from "../Button/Button";
 
-export function Navigator() {
+export interface INavigator {
+  focusProjects: () => void;
+  focusContact: () => void;
+}
+
+export function Navigator({focusProjects, focusContact}: INavigator) {
   return (
     <div className="flex gap-4">
-      <Button type="p" onClick={() => {}}>
+      <Button type="p" onClick={() => {focusProjects()}}>
         <p>Projects</p>
       </Button>
 
-      <Button type="p" onClick={() => {}}>
+      <Button type="p" onClick={() => {focusContact()}}>
         <p>Contact</p>
       </Button>
     </div>
