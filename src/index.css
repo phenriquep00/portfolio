@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .item{
+    perspective: 100px
+  }
+  .active-item {
+    color: white;
+    text-shadow: 2px 2px #feda4a, -2px -2px #feda4a;
+  }
+  @supports (-webkit-text-stroke: 1px #feda4a) {
+    .active-item {
+      color: transparent;
+      -webkit-text-stroke: 2px #feda4a;
+      text-shadow: none;
+    }
+  }
+}
