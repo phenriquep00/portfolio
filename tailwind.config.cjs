@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       animation: {
         button: "button 1s ease-in-out infinite",
-        'project_display': "project_display .75s ease-in-out",
+        'project_display': "project_display .5s ease-in-out",
       },
       keyframes: {
         button: {
