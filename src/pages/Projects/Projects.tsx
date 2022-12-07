@@ -36,7 +36,7 @@ export const Projects = forwardRef<Ref, IPage>((props, ref) => {
     <div
       tabIndex={0}
       ref={ref}
-      className="flex flex-row  gap-6 justify-center w-screen h-screen"
+      className="flex flex-row  gap-6 justify-center w-screen h-screen overflow-hidden"
     >
       <ProjectsList
         isMobile={isMobile}
