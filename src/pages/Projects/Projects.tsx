@@ -28,10 +28,10 @@ export const Projects = forwardRef<Ref, IPage>((props, ref) => {
   };
 
   const toggleProjectsList = () => {
-    if (showProjectsList === true) {
+    if (isMobile && showProjectsList === true) {
       setShowProjectsList(false);
       setShowProjectDisplay(true);
-    } else {
+    } else if (isMobile) {
       setShowProjectsList(true);
       setShowProjectDisplay(false);
     }
@@ -40,6 +40,10 @@ export const Projects = forwardRef<Ref, IPage>((props, ref) => {
   useEffect(() => {
     setIsMobile(height >= 700 && width >= 641 ? false : true);
     setShowProjectDisplay(isMobile ? false : true);
+    if (!isMobile) {
+      setShowProjectDisplay(true);
+      setShowProjectsList(true);
+    };
   }, [height, width]);
 
   useEffect(() => {
