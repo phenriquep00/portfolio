@@ -19,17 +19,32 @@ export const Projects = forwardRef<Ref, IPage>((props, ref) => {
   const [showProjectDisplay, setShowProjectDisplay] = useState<boolean>(
     isMobile ? false : true
   );
+  const [showProjectsList, setShowProjectsList] = useState<boolean>(true);
 
   const changeSelectedProject = (newActiveTitle: string) => {
     data.map((project, index) => {
-      project.title === newActiveTitle && setSelectedProject(project)
-    })
+      project.title === newActiveTitle && setSelectedProject(project);
+    });
+  };
+
+  const toggleProjectsList = () => {
+    if (showProjectsList === true) {
+      setShowProjectsList(false);
+      setShowProjectDisplay(true);
+    } else {
+      setShowProjectsList(true);
+      setShowProjectDisplay(false);
+    }
   };
 
   useEffect(() => {
     setIsMobile(height >= 700 && width >= 641 ? false : true);
     setShowProjectDisplay(isMobile ? false : true);
   }, [height, width]);
+
+  useEffect(() => {
+    toggleProjectsList();
+  }, [selectedProject]);
 
   return (
     /* TODO: make the ProjectsList togglable if the viewport is mobile */
@@ -40,11 +55,18 @@ export const Projects = forwardRef<Ref, IPage>((props, ref) => {
     >
       <ProjectsList
         isMobile={isMobile}
+        isOpen={showProjectsList}
+        toggle={toggleProjectsList}
         data={data}
         active={selectedProject.title}
         changeSelectedProject={changeSelectedProject}
       />
-      <ProjectDisplay isOpen={showProjectDisplay} selectedProject={selectedProject}/>
+      <ProjectDisplay
+        isOpen={showProjectDisplay}
+        isMobile={isMobile}
+        toggle={toggleProjectsList}
+        selectedProject={selectedProject}
+      />
     </div>
   );
 });
