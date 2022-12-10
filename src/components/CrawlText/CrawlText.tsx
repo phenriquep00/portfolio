@@ -1,6 +1,9 @@
 import "./crawl-text.css";
 
 export function CrawlText() {
+  //TODO: add the blue title before showing the crawl
+  //TODO: make crawl animation more fluid 
+  //TODO: remove the extra time on the animation
   return (
     <>
       <div className="fade"></div>
