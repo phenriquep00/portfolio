@@ -17,9 +17,9 @@ export function Navigator({
 }: INavigator) {
   return (
     <div className="flex gap-4 items-center justify-around overflow-hidden">
-      <Lightsaber hilt="/lightsaber1.png" color="lime" onClick={focusLandingPage}  text="Home" activePage={activePage}/>
-      <Lightsaber hilt="/lightsaber1.png" color="red" onClick={focusProjects}  text="Projects"activePage={activePage}/>
-      <Lightsaber hilt="/lightsaber1.png" color="blue" onClick={focusContact}  text="Contact" activePage={activePage}/>
+      <Lightsaber hilt="https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/lightsaber1.png" color="lime" onClick={focusLandingPage}  text="Home" activePage={activePage}/>
+      <Lightsaber hilt="https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/lightsaber1.png" color="red" onClick={focusProjects}  text="Projects"activePage={activePage}/>
+      <Lightsaber hilt="https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/lightsaber1.png" color="blue" onClick={focusContact}  text="Contact" activePage={activePage}/>
     </div>
   );
 };
