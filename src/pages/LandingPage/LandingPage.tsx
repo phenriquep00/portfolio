@@ -14,7 +14,7 @@ export const LandingPage = forwardRef<Ref, IPage>((props, ref) => {
   }, [showCrawl]);
 
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-[92vh] ">
+    <div className="flex flex-col items-center justify-center w-screen h-[90vh] ">
       <div className=" w-full h-[90%] overflow-hidden">
         {showCrawl && <CrawlText />}
       </div>

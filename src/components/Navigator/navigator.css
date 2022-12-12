@@ -1,0 +1,97 @@
+.lightsaber {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.saber-lime {
+  height: 4px;
+  width: 100px;
+  margin-top: -26px;
+  margin-left: 64px;
+  background-color: white;
+  border-radius: 6px/10px;
+  box-shadow: 0px 0px 10px, 0px 0px 2px inset;
+  transform: scale(2);
+  animation: glow-lime 1.5s linear infinite, ignite 1s linear;
+}
+
+@keyframes glow-lime {
+  from {
+    color: lime;
+    box-shadow: 0 0 9px lime;
+  }
+  50% {
+    color: lime;
+    box-shadow: 0 0 14px 2px lime;
+  }
+  to {
+    color: lime;
+    box-shadow: 0 0 9px lime;
+  }
+}
+
+.saber-red {
+  height: 4px;
+  width: 100px;
+  margin-top: -26px;
+  margin-left: 64px;
+  background-color: white;
+  border-radius: 6px/10px;
+  box-shadow: 0px 0px 10px, 0px 0px 2px inset;
+  transform: scale(2);
+  animation: glow-red 1.5s linear infinite, ignite 1s linear;
+}
+
+@keyframes glow-red {
+  from {
+    color: red;
+    box-shadow: 0 0 9px red;
+  }
+  50% {
+    color: red;
+    box-shadow: 0 0 14px 2px red;
+  }
+  to {
+    color: red;
+    box-shadow: 0 0 9px red;
+  }
+}
+
+.saber-blue {
+  height: 4px;
+  width: 100px;
+  margin-top: -26px;
+  margin-left: 64px;
+  background-color: white;
+  border-radius: 6px/10px;
+  box-shadow: 0px 0px 10px, 0px 0px 2px inset;
+  transform: scale(2);
+  animation: glow-blue 1.5s linear infinite, ignite 1s linear;
+}
+
+@keyframes glow-blue {
+  from {
+    color: blue;
+    box-shadow: 0 0 9px blue;
+  }
+  50% {
+    color: blue;
+    box-shadow: 0 0px 14px 2px blue;
+  }
+  to {
+    color: blue;
+    box-shadow: 0 0 9px blue;
+  }
+}
+
+@keyframes ignite {
+  0% {
+    transform: translate(-100%, 0%) scale(1);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(2);
+  }
+}

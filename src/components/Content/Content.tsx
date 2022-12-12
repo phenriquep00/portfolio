@@ -5,13 +5,13 @@ import { Projects } from "../../pages/Projects/Projects";
 import { Navigator } from "../Navigator/Navigator";
 
 export function Content() {
-  const [activePage, setActivePage] = useState<string>("LandingPage");
+  const [activePage, setActivePage] = useState<string>("Home");
   const projectsRef = createRef<HTMLDivElement>();
   const contactRef = createRef<HTMLDivElement>();
   const LandingPageRef = createRef<HTMLDivElement>();
 
   const handleLandingPageFocus = () => {
-    setActivePage("LandingPage");
+    setActivePage("Home");
     LandingPageRef.current?.focus();
   }
 
@@ -26,9 +26,9 @@ export function Content() {
   };
 
   return (
-    <div className="absolute w-full h-full top-0 left-0 text-white">
+    <div className="absolute w-full h-full top-0 left-0 text-white overflow-hidden">
       <div className="flex flex-col items-center justify-center">
-        {activePage === "LandingPage" ? (
+        {activePage === "Home" ? (
           <LandingPage ref={LandingPageRef}/>
         ) : activePage === "Projects" ? (
           <Projects ref={projectsRef} />
@@ -36,7 +36,7 @@ export function Content() {
           <Contact ref={contactRef} />
         )}
       </div>
-      <Navigator focusLandingPage={handleLandingPageFocus} focusContact={handleContactFocus} focusProjects={handleProjectsFocus} />
+      <Navigator activePage={activePage} focusLandingPage={handleLandingPageFocus} focusContact={handleContactFocus} focusProjects={handleProjectsFocus} />
     </div>
   );
 }
