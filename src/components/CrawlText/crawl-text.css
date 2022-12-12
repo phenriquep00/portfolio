@@ -8,35 +8,29 @@
 }
 
 .crawl-section {
-  display: flex;
-  justify-content: center;
-  height: 800px;
   perspective: 200px;
-  color: #feda4a;
   font-family: "Pathwat Gothic One", sans-serif;
-  font-size: 500%;
   font-weight: 600;
-  letter-spacing: 6px;
-  line-weight: 150%;
-  text-align: justify;
 }
 
 .crawl {
   position: relative;
   top: -100px;
   transform-origin: 50% 100%;
-  animation: crawl 60s linear;
+  animation: crawl 20s linear;
   animation-iteration-count: infinite;
 }
 
 .crawl > .title {
   font-size: 90%;
   text-align: center;
+
 }
 
 .crawl > .title h1 {
   margin: 0 0 100px;
   text-transform: uppercase;
+
 }
 
 @keyframes crawl {
@@ -45,7 +39,7 @@
     transform: rotateX(20deg) translateZ(0);
   }
   100% {
-    top: -6000px;
-    transform: rotateX(25deg) translateZ(-2000px);
+    top: -1200px;
+    transform: rotateX(22deg) translateZ(-300px);
   }
 }

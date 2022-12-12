@@ -6,6 +6,7 @@ module.exports = {
       animation: {
         button: "button 1s ease-in-out infinite",
         'project_display': "project_display .5s ease-in-out",
+        'prelude': 'prelude 7s ease-in-out'
       },
       keyframes: {
         button: {
@@ -20,8 +21,18 @@ module.exports = {
             transform: 'translate(0%, 0%)',
           }
         },
+        prelude: {
+          '0%': {
+            opacity: 1,
+          },
+          '100%': {
+            opacity: 0,
+          } 
+        }
       },
     },
   },
-  plugins: [],
+  plugins: [
+
+  ],
 };

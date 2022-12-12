@@ -1,26 +1,48 @@
+import { useEffect, useState } from "react";
 import "./crawl-text.css";
 
 export function CrawlText() {
   //TODO: add the blue title before showing the crawl
-  //TODO: make crawl animation more fluid 
+  //TODO: make crawl animation more fluid
   //TODO: remove the extra time on the animation
+
+  const [startCrawl, setStartCrawl] = useState<boolean>(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setStartCrawl(true);
+    }, 7000);
+  });
+
   return (
     <>
-      <div className="fade"></div>
-      <section className="crawl-section">
-        <div className="crawl">
-          <div className="title">
-            <p>phenriquep00</p>
-            <h1>hello there</h1>
+      {!startCrawl ? (
+        <div className="flex z-20 flex-col flex-1 max-h-auto max-w-auto fixed top-1/2 left-1/2 w-auto h-auto translate-x-[-50%] translate-y-[-50%]">
+          <div className="animate-prelude text-blue-600 text-3xl">
+            <p>A long time ago in a galaxy far,</p>
+            <p>far away...</p>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur sit mollitia quam vero, iusto, incidunt dolore ad
-            blanditiis nam excepturi atque nesciunt voluptatibus exercitationem
-            impedit suscipit necessitatibus saepe laborum maxime.
-          </p>
         </div>
-      </section>
+      ) : (
+        <>
+          <div className="absolute w-full min-h-[60vh] -top-6 z-[1] bg-gradient-to-b from-black via-black"></div>
+          <section className="flex justify-center h-[800px] text-[#feda4a] text-[500%] font-semibold tracking-[6px] leading-[150%] text-center crawl-section">
+            <div className="crawl">
+              <div className="title">
+                <p>phenriquep00</p>
+                <h1>hello there</h1>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequuntur sit mollitia quam vero, iusto, incidunt dolore ad
+                blanditiis nam excepturi atque nesciunt voluptatibus
+                exercitationem impedit suscipit necessitatibus saepe laborum
+                maxime.
+              </p>
+            </div>
+          </section>
+        </>
+      )}
     </>
   );
 }

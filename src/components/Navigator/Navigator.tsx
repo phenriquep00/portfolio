@@ -6,18 +6,38 @@ export interface INavigator {
   focusLandingPage: () => void;
 }
 
-export function Navigator({focusLandingPage, focusProjects, focusContact}: INavigator) {
+export function Navigator({
+  focusLandingPage,
+  focusProjects,
+  focusContact,
+}: INavigator) {
   return (
     <div className="flex gap-4 items-center justify-around">
-      <Button type="p" onClick={() => {focusLandingPage()}}>
+
+      <Button
+        type="p"
+        onClick={() => {
+          focusLandingPage();
+        }}
+      >
         <p>Home</p>
       </Button>
 
-      <Button type="p" onClick={() => {focusProjects()}}>
+      <Button
+        type="p"
+        onClick={() => {
+          focusProjects();
+        }}
+      >
         <p>Projects</p>
       </Button>
 
-      <Button type="p" onClick={() => {focusContact()}}>
+      <Button
+        type="p"
+        onClick={() => {
+          focusContact();
+        }}
+      >
         <p>Contact</p>
       </Button>
     </div>
