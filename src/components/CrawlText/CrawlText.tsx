@@ -18,7 +18,7 @@ export function CrawlText() {
     <>
       {!startCrawl ? (
         <div className="flex z-20 flex-col flex-1 max-h-auto max-w-auto fixed top-1/2 left-1/2 w-auto h-auto translate-x-[-50%] translate-y-[-50%]">
-          <div className="animate-prelude text-blue-600 text-3xl">
+          <div className="animate-prelude text-[#1B7DEB] text-3xl">
             <p>A long time ago in a galaxy far,</p>
             <p>far away...</p>
           </div>
