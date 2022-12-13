@@ -22,7 +22,7 @@ export function ProjectsList({
   return (
     <>
       {isOpen && (
-        <div className="flex flex-col">
+        <div className="flex flex-col animate-project_list">
           {isMobile ? (
             <button
               onClick={() => {toggle()}}
