@@ -7,7 +7,7 @@ export const Contact = forwardRef<Ref, IPage>((props, ref) => (
   <div
     tabIndex={0}
     ref={ref}
-    className="flex flex-col p-2   items-center rounded-md  justify-evenly w-4/5 h-[90vh] mt-3 bg-opacity-50 bg-gray-700"
+    className="flex flex-col p-2   items-center rounded-md  justify-evenly w-4/5 h-[88vh] mt-3 bg-opacity-50 bg-gray-700"
   >
     <div className="flex flex-row p-4 gap-4 w-full h-3/4">
       <SocialMediaList />

@@ -8,6 +8,7 @@ export function EmailForm() {
       className="flex flex-1 flex-col items-center justify-center border-2 border-[#1B7DEB] bg-black rounded bg-opacity-70  h-full"
     >
       <h1 className="text-white py-8 text-3xl font-black">Send me a email!</h1>
+      <h2>[in progress]</h2>
       <div className="flex flex-col gap-4">
         <div className="flex gap-3 items-center justify-between">
           <label className="font-semibold " htmlFor="email">

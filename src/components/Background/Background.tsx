@@ -47,7 +47,7 @@ export function Background() {
             enable: true,
             out_mode: "out",
             random: true,
-            speed: 0.3,
+            speed: 0.1,
             straight: false,
           },
           number: { density: { enable: true, value_area: 800 }, value: 100 },

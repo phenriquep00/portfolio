@@ -23,7 +23,7 @@ export function CrawlText() {
         </div>
       ) : (
         <>
-          <div className="absolute w-full min-h-[60vh] -top-6 z-[1] bg-gradient-to-b from-black via-black"></div>
+          <div className="absolute w-full min-h-[60vh] -top-6 z-[1] bg-gradient-to-b from-black via-black animate-fadein"></div>
           <section className="flex justify-center h-[800px] text-[#feda4a] text-[500%] font-semibold tracking-[6px] leading-[150%] text-center crawl-section">
             <div className="crawl">
               <div className="title">

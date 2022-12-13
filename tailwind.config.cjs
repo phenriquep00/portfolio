@@ -6,7 +6,8 @@ module.exports = {
       animation: {
         'project_display': "project_display .5s ease-in-out",
         'project_list': "project_list .5s ease-in-out",
-        'prelude': 'prelude 7s ease-in-out'
+        'prelude': 'prelude 7s ease-in-out',
+        'fadein': 'fadein 2s ease-in-out',
       },
       keyframes: {
 
@@ -33,7 +34,15 @@ module.exports = {
           '100%': {
             opacity: 0,
           } 
-        }
+        },
+        fadein:  {
+          '0%': {
+            opacity: 0,
+          },
+          '100%': {
+            opacity: 1,
+          },
+        },
       },
     },
   },
