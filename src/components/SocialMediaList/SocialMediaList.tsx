@@ -32,6 +32,7 @@ export function SocialMediaList() {
       >
         <DiscordLogo size={32} color="#feda4a" weight="bold" />
       </SocialMediaItem>
+      
       <SocialMediaItem
         description="fell free to send me a message"
         link="https://wa.me/5599981277776"

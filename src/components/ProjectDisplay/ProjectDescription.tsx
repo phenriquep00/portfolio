@@ -12,9 +12,7 @@ export function ProjectDescription({
   technologies,
 }: IPorjectDescription) {
   return (
-    <div
-      className="flex items-center bg-slate-50 text-black overflow-y-scroll rounded p-6 text-2xl font-medium flex-1 gap-2 flex-col"
-    >
+    <div className="flex items-center bg-slate-50 text-black overflow-y-scroll rounded p-6 text-2xl font-medium flex-1 gap-2 flex-col">
       <p>{description}</p>
       <p>{technologies}</p>
       <p>{status}</p>

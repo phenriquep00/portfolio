@@ -25,10 +25,12 @@ export function ProjectsList({
         <div className="flex flex-col animate-project_list">
           {isMobile ? (
             <button
-              onClick={() => {toggle()}}
+              onClick={() => {
+                toggle();
+              }}
               className="flex items-center justify-center w-14 h-14 border-2 border-[#feda4a] m-2"
             >
-              <ArrowLineLeft size={40} color={'#feda4a'} weight="bold" />
+              <ArrowLineLeft size={40} color={"#feda4a"} weight="bold" />
             </button>
           ) : null}
           <div

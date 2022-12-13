@@ -25,11 +25,13 @@ export function ProjectDisplay({
         >
           {isMobile && (
             <button
-            onClick={() => {toggle()}}
-            className="flex items-center justify-center self-start w-10 h-10 border-2 border-[#feda4a] m-2"
-          >
-            <List size={40} weight="bold" color="#feda4a"/>
-          </button>
+              onClick={() => {
+                toggle();
+              }}
+              className="flex items-center justify-center self-start w-10 h-10 border-2 border-[#feda4a] m-2"
+            >
+              <List size={40} weight="bold" color="#feda4a" />
+            </button>
           )}
           <ProjectImage img={selectedProject.img} />
           <ProjectDescription
