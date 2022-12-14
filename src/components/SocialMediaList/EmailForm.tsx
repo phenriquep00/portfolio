@@ -1,9 +1,33 @@
-import { Button } from "../Button/Button";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 export function EmailForm() {
-  const sendEmail = () => {};
+  const form = useRef<any>();
+
+  const sendEmail = (e: any) => {
+    e.preventDefault(); // prevents the page from reloading when you hit “Send”
+
+    emailjs
+      .sendForm(
+        "service_c2fxhlk",
+        "template_paiti5i",
+        form.current,
+        "AYGggYitvOW8ZfO-o"
+      )
+      .then(
+        (result) => {
+          // show the user a success message
+          alert("email successfuly sent, thanks!");
+        },
+        (error) => {
+          // show the user an error
+          alert("there was a problem sending your email, please try again");
+        }
+      );
+  };
   return (
     <form
+      ref={form}
       onSubmit={sendEmail}
       className="flex flex-1 flex-col items-center justify-center border-2 border-[#1B7DEB] bg-black rounded bg-opacity-70  h-full"
     >
