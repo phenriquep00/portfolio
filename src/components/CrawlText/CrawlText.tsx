@@ -31,11 +31,19 @@ export function CrawlText() {
                 <h1>hello there</h1>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur sit mollitia quam vero, iusto, incidunt dolore ad
-                blanditiis nam excepturi atque nesciunt voluptatibus
-                exercitationem impedit suscipit necessitatibus saepe laborum
-                maxime.
+                {/* TODO: create a about me */}
+                Hi and Wellcome to my portfolio! <br /> I am Pedro Henrique,
+                Software Student with focus on web development and data
+                analisys. <br />
+                Here you will find information about the projects i have been
+                working on
+                <br />
+                And ways to contact me, in case you want to, you know, contact
+                me. <br />
+                Fell free to send any feedback on the email form in the Contact
+                section.
+                <br />
+                May the force be with you!
               </p>
             </div>
           </section>

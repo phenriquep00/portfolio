@@ -17,7 +17,7 @@
   position: relative;
   top: -100px;
   transform-origin: 50% 100%;
-  animation: crawl 20s linear;
+  animation: crawl 40s linear;
   animation-iteration-count: infinite;
 }
 
@@ -37,7 +37,7 @@
     transform: rotateX(20deg) translateZ(0);
   }
   100% {
-    top: -1200px;
-    transform: rotateX(22deg) translateZ(-300px);
+    top: -2200px;
+    transform: rotateX(18deg) translateZ(-600px);
   }
 }
