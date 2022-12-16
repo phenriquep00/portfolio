@@ -1,11 +1,11 @@
-type status =
+export type status =
   | "active"
   | "offline"
   | "in progress"
   | "repository only"
   | "completed";
 
-type technologies =
+export type technologies =
   | "typescript"
   | "python"
   | "reactjs"

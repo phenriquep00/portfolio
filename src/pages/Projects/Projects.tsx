@@ -51,7 +51,6 @@ export const Projects = forwardRef<Ref, IPage>((props, ref) => {
   }, [selectedProject]);
 
   return (
-    /* TODO: make the ProjectsList togglable if the viewport is mobile */
     <div
       tabIndex={0}
       ref={ref}
