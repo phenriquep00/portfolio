@@ -97,21 +97,6 @@ export const data: IData[] = [
     status: ["active", "completed", "repository only"],
     technologies: ["python", "pygame"],
   },
-
-  {
-    title: "Page clones",
-    img: "",
-    description: "A react app that assembles my clones of web front-ends",
-    status: ["offline", "in progress"],
-    technologies: [
-      "vite",
-      "typescript",
-      "reactjs",
-      "tailwindcss",
-      "html",
-      "css",
-    ],
-  },
   {
     title: "Imersão Dados",
     img: "",
