@@ -74,7 +74,7 @@ export const data: IData[] = [
   },
   {
     title: "Nlw Return",
-    img: "",
+    img: "https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/project_images/nlw-return.png",
     description:
       "A project created during Rocketseat's Next Level Week. The goal of the event was to create a react component that allows the user to send feedback to the page maintainers. The feedback widget component is supported in web and mobile apps and is connected with a nodejs backend.",
     status: ["completed", "repository only", "offline"],
