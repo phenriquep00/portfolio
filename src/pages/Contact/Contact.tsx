@@ -4,6 +4,9 @@ import { SocialMediaList } from "../../components/SocialMediaList/SocialMediaLis
 import { IPage, Ref } from "../Projects/Projects";
 
 export const Contact = forwardRef<Ref, IPage>((props, ref) => (
+
+  //TODO: if the viewport is mobile,  toggle email form with a button
+
   <div
     tabIndex={0}
     ref={ref}

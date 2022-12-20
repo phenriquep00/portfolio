@@ -11,7 +11,7 @@ import { SocialMediaItem } from "./SocialMediaItem";
 
 export function SocialMediaList() {
   return (
-    <ul className="flex flex-col gap-4 flex-1 h-full">
+    <ul className="flex flex-col gap-4 flex-1 h-full overflow-y-scroll">
       <SocialMediaItem
         description="check out my profile on github"
         link="https://github.com/phenriquep00"
