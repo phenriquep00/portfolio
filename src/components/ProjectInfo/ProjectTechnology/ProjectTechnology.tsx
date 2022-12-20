@@ -29,7 +29,7 @@ interface IProjectTechnology {
 
 export function ProjectTechnology({ tech }: IProjectTechnology) {
   return (
-    <div className="">
+    <div className="text-[#feda4a]">
       {
         tech === "typescript" ? (
           <img src={typescript} alt="typescript logo" />
