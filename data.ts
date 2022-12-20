@@ -48,22 +48,6 @@ export const data: IData[] = [
     ],
   },
   {
-    title: "Poker",
-    img: "",
-    description:
-      "A Poker game created with python & pygame. The players plays against 3 bots in a classic poker match where the winner is the last one with chips in the table.",
-    status: ["active", "completed", "repository only"],
-    technologies: ["python", "pygame"],
-  },
-  {
-    title: "Beat Machine",
-    img: "",
-    description:
-      "A python & pygame application that simulates a drum kit. The app allows the user to select the beats per second and the amount of beats to repeat. The user can also save and import beats following a simple .txt file with the pattern.",
-    status: ["active", "completed", "repository only"],
-    technologies: ["python", "pygame"],
-  },
-  {
     title: "Nlw e-sports",
     img: "",
     description:
@@ -80,6 +64,40 @@ export const data: IData[] = [
       "css",
     ],
   },
+  {
+    title: "Poker",
+    img: "",
+    description:
+      "A Poker game created with python & pygame. The players plays against 3 bots in a classic poker match where the winner is the last one with chips in the table.",
+    status: ["active", "completed", "repository only"],
+    technologies: ["python", "pygame"],
+  },
+  {
+    title: "Nlw Return",
+    img: "",
+    description:
+      "A project created during Rocketseat's Next Level Week. The goal of the event was to create a react component that allows the user to send feedback to the page maintainers. The feedback widget component is supported in web and mobile apps and is connected with a nodejs backend.",
+    status: ["completed", "repository only", "offline"],
+    technologies: [
+      "vite",
+      "react-native",
+      "reactjs",
+      "typescript",
+      "nodejs",
+      "tailwindcss",
+      "html",
+      "css",
+    ],
+  },
+  {
+    title: "Beat Machine",
+    img: "",
+    description:
+      "A python & pygame application that simulates a drum kit. The app allows the user to select the beats per second and the amount of beats to repeat. The user can also save and import beats following a simple .txt file with the pattern.",
+    status: ["active", "completed", "repository only"],
+    technologies: ["python", "pygame"],
+  },
+
   {
     title: "Page clones",
     img: "",
@@ -101,23 +119,7 @@ export const data: IData[] = [
     status: ["completed", "active", "repository only"],
     technologies: ["python", "pandas"],
   },
-  {
-    title: "Nlw Return",
-    img: "",
-    description:
-      "A project created during Rocketseat's Next Level Week. The goal of the event was to create a react component that allows the user to send feedback to the page maintainers. The feedback widget component is supported in web and mobile apps and is connected with a nodejs backend.",
-    status: ["completed", "repository only", "offline"],
-    technologies: [
-      "vite",
-      "react-native",
-      "reactjs",
-      "typescript",
-      "nodejs",
-      "tailwindcss",
-      "html",
-      "css",
-    ],
-  },
+
   {
     title: "Pong",
     img: "",
@@ -128,7 +130,8 @@ export const data: IData[] = [
   {
     title: "Hangman",
     img: "",
-    description: "A hangman web application created with react and stylized with tailwindcss. The words come from a custom server on supabase",
+    description:
+      "A hangman web application created with react and stylized with tailwindcss. The words come from a custom server on supabase",
     status: ["completed", "offline", "repository only"],
     technologies: ["reactjs", "javascript", "css", "html", "supabase"],
   },
