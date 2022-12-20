@@ -26,7 +26,8 @@ export function ProjectDescription({
         ))}
       </div>
 
-      <div className="flex flex-row gap-3">
+      <div className="flex flex-row gap-3 flex-wrap">
+      <h4 className="py-2 px-8">Technologies: </h4>
         {technologies.map((technology: technologies, index: number) => (
           <ProjectTechnology key={index} tech={technology} />
         ))}
