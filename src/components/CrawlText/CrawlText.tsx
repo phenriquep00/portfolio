@@ -9,7 +9,7 @@ export function CrawlText() {
   useEffect(() => {
     setTimeout(() => {
       setStartCrawl(true);
-    }, 7000);
+    }, 5000);
   });
 
   return (
@@ -31,8 +31,7 @@ export function CrawlText() {
                 <h1>hello there</h1>
               </div>
               <p>
-                {/* TODO: create a about me */}
-                Hi and Wellcome to my portfolio! <br /> I am Pedro Henrique,
+                Hi and Welcome to my portfolio! <br /> I am Pedro Henrique,
                 Software Student with focus on web development and data
                 analisys. <br />
                 Here you will find information about the projects i have been

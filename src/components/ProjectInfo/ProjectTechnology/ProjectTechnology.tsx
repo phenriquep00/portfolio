@@ -32,7 +32,7 @@ interface IProjectTechnology {
 
 export function ProjectTechnology({ tech }: IProjectTechnology) {
   return (
-    <div className="text-[#feda4a]">
+    <div className="text-white">
       {
         tech === "typescript" ? (
           <div className="flex gap-1 justify-center items-center">
@@ -44,7 +44,7 @@ export function ProjectTechnology({ tech }: IProjectTechnology) {
             <img className="w-16 h-16" src={python} alt="python logo" />
             <p>{tech}</p>
           </div>
-        ) : tech === "reactjs" ? (
+        ) : tech === "reactjs" || tech === "react-native" ? (
           <div className="flex gap-1 justify-center items-center">
             <img className="w-16 h-16" src={react} alt="react logo" />
             <p>{tech}</p>

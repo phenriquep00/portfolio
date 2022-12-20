@@ -6,7 +6,7 @@ module.exports = {
       animation: {
         project_display: "project_display .5s ease-in-out",
         project_list: "project_list .5s ease-in-out",
-        prelude: "prelude 7s ease-in-out",
+        prelude: "prelude 5s ease-in-out",
         fadein: "fadein 2s ease-in-out",
         contact: "contact 0.75s ease-in-out",
         contactCard: "contactCard 0.75s ease-in-out",
