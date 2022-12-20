@@ -33,7 +33,7 @@ export interface IData {
 export const data: IData[] = [
   {
     title: "TODOApp",
-    img: "",
+    img: "https://user-images.githubusercontent.com/81166239/204522990-c1887aba-032f-49f4-bb01-eef15f7fef7f.png",
     description:
       "A web application to manage tasks and tasklists. The user save their tasks with google account easy login, and can use the same account in many devices at once. The app is very keyboard friendly and all of it's core functionalities can be acceced through hotkeys",
     status: ["active", "in progress"],
