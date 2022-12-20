@@ -1,11 +1,15 @@
 import { technologies } from "../../../../data";
-import html from "../../../../public/logos/png/001-html.png";
-import react from "../../../../public/logos/png/002-physics.png";
-import typescript from "../../../../public/logos/png/003-typescript.png";
-import javascript from "../../../../public/logos/png/004-js.png";
-import python from "../../../../public/logos/png/005-python.png";
-import css from "../../../../public/logos/png/006-css-3.png";
-import bash from "../../../../public/logos/png/007-gnu-bash.png";
+import html from "../../../../src/logos/png/001-html.png";
+import react from "../../../../src/logos/png/002-physics.png";
+import typescript from "../../../../src/logos/png/003-typescript.png";
+import javascript from "../../../../src/logos/png/004-js.png";
+import python from "../../../../src/logos/png/005-python.png";
+import css from "../../../../src/logos/png/006-css-3.png";
+import bash from "../../../../src/logos/png/007-gnu-bash.png";
+import node from "../../../../src/logos/png/008-nodejs.png";
+import pandas from "../../../../src/logos/png/009-pandas.png";
+import tailwind from "../../../../src/logos/png/010-tailwind.svg";
+import vite from "../../../../src/logos/png/011-vite.svg";
 
 interface IProjectTechnology {
   tech: technologies;
@@ -15,10 +19,9 @@ interface IProjectTechnology {
   | "python"
   | "reactjs"
   | "javascript"
-  | "nodejs" * 
+  | "nodejs" 
   | "react-native" * 
-  | "pygame" * 
-  | "pandas" * 
+  | "pandas" 
   | "vite" * 
   | "tailwindcss" * 
   | "supabase" * 
@@ -32,20 +35,63 @@ export function ProjectTechnology({ tech }: IProjectTechnology) {
     <div className="text-[#feda4a]">
       {
         tech === "typescript" ? (
-          <img src={typescript} alt="typescript logo" />
+          <div className="flex gap-1 justify-center items-center">
+            <img className="w-16 h-16" src={typescript} alt="typescript logo" />
+            <p>{tech}</p>
+          </div>
         ) : tech === "python" ? (
-          <img src={python} alt="python logo" />
+          <div className="flex gap-1 justify-center items-center">
+            <img className="w-16 h-16" src={python} alt="python logo" />
+            <p>{tech}</p>
+          </div>
         ) : tech === "reactjs" ? (
-          <img src={react} alt="reactjs logo" />
+          <div className="flex gap-1 justify-center items-center">
+            <img className="w-16 h-16" src={react} alt="react logo" />
+            <p>{tech}</p>
+          </div>
         ) : tech === "javascript" ? (
-          <img src={javascript} alt="javascript logo" />
+          <div className="flex gap-1 justify-center items-center">
+            <img className="w-16 h-16" src={javascript} alt="javascript logo" />
+            <p>{tech}</p>
+          </div>
         ) : tech === "html" ? (
-          <img src={html} alt="html logo" />
+          <div className="flex gap-1 justify-center items-center">
+            <img className="w-16 h-16" src={html} alt="html logo" />
+            <p>{tech}</p>
+          </div>
         ) : tech === "css" ? (
-          <img src={css} alt="css logo" />
+          <div className="flex gap-1 justify-center items-center">
+            <img className="w-16 h-16" src={css} alt="css logo" />
+            <p>{tech}</p>
+          </div>
         ) : tech === "bash" ? (
-          <img src={bash} alt="gnu bash logo" />
-        ) : tech /* TODO: add technologies */
+          <div className="flex gap-1 justify-center items-center">
+            <img className="w-16 h-16" src={bash} alt="bash logo" />
+            <p>{tech}</p>
+          </div>
+        ) : tech === "nodejs" ? (
+          <div className="flex gap-1 justify-center items-center">
+            <img className="w-16 h-16" src={node} alt="nodejs logo" />
+            <p>{tech}</p>
+          </div>
+        ) : tech === "pandas" ? (
+          <div className="flex gap-1 justify-center items-center">
+            <img className="w-16 h-16" src={pandas} alt="pandas logo" />
+            <p>{tech}</p>
+          </div>
+        ) : tech === "tailwindcss" ? (
+          <div className="flex gap-1 justify-center items-center">
+            <img className="w-16 h-16" src={tailwind} alt="tailwind logo" />
+            <p>{tech}</p>
+          </div>
+        ) : tech === "vite" ? (
+          <div className="flex gap-1 justify-center items-center">
+            <img className="w-16 h-16" src={vite} alt="vite logo" />
+            <p>{tech}</p>
+          </div>
+        ) : (
+          tech
+        ) /* TODO: add technologies */
       }
     </div>
   );

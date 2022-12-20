@@ -12,11 +12,9 @@ export type technologies =
   | "javascript"
   | "nodejs"
   | "react-native"
-  | "pygame"
   | "pandas"
   | "vite"
   | "tailwindcss"
-  | "supabase"
   | "html"
   | "css"
   | "bash"
@@ -42,7 +40,6 @@ export const data: IData[] = [
       "typescript",
       "reactjs",
       "tailwindcss",
-      "supabase",
       "html",
       "css",
     ],
@@ -70,7 +67,7 @@ export const data: IData[] = [
     description:
       "A Poker game created with python & pygame. The players plays against 3 bots in a classic poker match where the winner is the last one with chips in the table.",
     status: ["active", "completed", "repository only"],
-    technologies: ["python", "pygame"],
+    technologies: ["python"],
   },
   {
     title: "Nlw Return",
@@ -95,7 +92,7 @@ export const data: IData[] = [
     description:
       "A python & pygame application that simulates a drum kit. The app allows the user to select the beats per second and the amount of beats to repeat. The user can also save and import beats following a simple .txt file with the pattern.",
     status: ["active", "completed", "repository only"],
-    technologies: ["python", "pygame"],
+    technologies: ["python"],
   },
   {
     title: "Imersão Dados 4",
@@ -118,6 +115,6 @@ export const data: IData[] = [
     description:
       "A hangman web application created with react and stylized with tailwindcss. The words come from a custom server on supabase",
     status: ["completed", "offline", "repository only"],
-    technologies: ["reactjs", "javascript", "css", "html", "supabase"],
+    technologies: ["reactjs", "javascript", "css", "html", ],
   },
 ];
