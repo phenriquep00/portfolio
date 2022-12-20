@@ -49,7 +49,7 @@ export const data: IData[] = [
   },
   {
     title: "Nlw e-sports",
-    img: "",
+    img: "https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/project_images/nlw-esports.png",
     description:
       "A web projects developed during Rocketseat's Next Level Week Event. The project consists of a application to find people to play online games with you. The complete project is composed by a web app created with react, a mobile app built with react-native and a server created with nodejs.",
     status: ["completed", "offline", "repository only"],
@@ -66,7 +66,7 @@ export const data: IData[] = [
   },
   {
     title: "Poker",
-    img: "",
+    img: "https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/project_images/poker.png",
     description:
       "A Poker game created with python & pygame. The players plays against 3 bots in a classic poker match where the winner is the last one with chips in the table.",
     status: ["active", "completed", "repository only"],
@@ -91,15 +91,15 @@ export const data: IData[] = [
   },
   {
     title: "Beat Machine",
-    img: "",
+    img: "https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/project_images/beat-machine.png",
     description:
       "A python & pygame application that simulates a drum kit. The app allows the user to select the beats per second and the amount of beats to repeat. The user can also save and import beats following a simple .txt file with the pattern.",
     status: ["active", "completed", "repository only"],
     technologies: ["python", "pygame"],
   },
   {
-    title: "Imersão Dados",
-    img: "",
+    title: "Imersão Dados 4",
+    img: "https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/project_images/imersao-dados-4.png",
     description: "A data science project created during Alura's Imersão Dados.",
     status: ["completed", "active", "repository only"],
     technologies: ["python", "pandas"],
@@ -107,14 +107,14 @@ export const data: IData[] = [
 
   {
     title: "Pong",
-    img: "",
+    img: "https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/project_images/pong.png",
     description: "A simple pong game made with python's turtle library",
     status: ["completed", "repository only"],
     technologies: ["python"],
   },
   {
     title: "Hangman",
-    img: "",
+    img: "https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/project_images/hangman.png",
     description:
       "A hangman web application created with react and stylized with tailwindcss. The words come from a custom server on supabase",
     status: ["completed", "offline", "repository only"],
