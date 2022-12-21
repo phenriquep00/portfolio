@@ -20,7 +20,7 @@ export function Lightsaber({
 
   const { height, width } = useWindowDimensions();
   const [isMobile, setIsMobile] = useState(
-    height <= 700 && width <= 450 ? true : false
+    height <= 700 || width <= 450 ? true : false
   );
 
   return (
