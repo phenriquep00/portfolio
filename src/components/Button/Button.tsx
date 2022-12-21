@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 
 type ButtonProps = PropsWithChildren<{
   type: "p" | "s" | "t";
-  onClick: any;
+  onClick: () => void;
 }>;
 
 export function Button({ children, type, onClick }: ButtonProps) {
