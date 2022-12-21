@@ -33,7 +33,7 @@ export const Contact = forwardRef<Ref, IPage>((props, ref) => {
 
       {!showEmailForm && (
         <Button onClick={() => setShowEmailForm(true)} type="p">
-          Send a Email
+          {width} {height}
         </Button>
       )}
     </div>
