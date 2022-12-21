@@ -21,7 +21,7 @@ export function ProjectDisplay({
       {isOpen && (
         <div
           key={selectedProject.title}
-          className="flex flex-col gap-4 items-center flex-1 p-2 animate-project_display"
+          className="flex w-full h-full flex-col gap-4 items-center flex-1 p-2 animate-project_display"
         >
           {isMobile && (
             <button
@@ -33,8 +33,9 @@ export function ProjectDisplay({
               <List size={40} weight="bold" color="#feda4a" />
             </button>
           )}
-          <ProjectImage img={selectedProject.img} />
+          <ProjectImage mobile={isMobile} img={selectedProject.img} />
           <ProjectDescription
+            mobile={isMobile}
             description={selectedProject.description}
             status={selectedProject.status}
             technologies={selectedProject.technologies}

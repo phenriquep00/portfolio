@@ -7,7 +7,7 @@ interface IProjectStatus {
 export function ProjectStatus({ stts }: IProjectStatus) {
   return (
     <div
-      className={`border-2 p-2 rounded
+      className={`flex items-center justify-center border-2 rounded
             ${
               stts === "active"
                 ? "border-green-600 text-green-600 bg-green-200"
