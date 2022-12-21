@@ -14,7 +14,7 @@ export const Projects = forwardRef<Ref, IPage>((props, ref) => {
   const { height, width } = useWindowDimensions();
   const [selectedProject, setSelectedProject] = useState<IData>(data[0]);
   const [isMobile, setIsMobile] = useState(
-    height >= 550 && width >= 300 ? false : true
+    height <= 550 && width <= 300 ? true : false
   );
   const [showProjectDisplay, setShowProjectDisplay] = useState<boolean>(
     isMobile ? false : true
@@ -38,7 +38,7 @@ export const Projects = forwardRef<Ref, IPage>((props, ref) => {
   };
 
   useEffect(() => {
-    setIsMobile(height >= 550 && width >= 300 ? false : true);
+    setIsMobile(height <= 550 && width <= 300 ? true : false);
     setShowProjectDisplay(isMobile ? false : true);
     if (!isMobile) {
       setShowProjectDisplay(true);
