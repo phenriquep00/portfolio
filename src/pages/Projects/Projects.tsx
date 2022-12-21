@@ -14,7 +14,7 @@ export const Projects = forwardRef<Ref, IPage>((props, ref) => {
   const { height, width } = useWindowDimensions();
   const [selectedProject, setSelectedProject] = useState<IData>(data[0]);
   const [isMobile, setIsMobile] = useState(
-    height <= 550 && width <= 300 ? true : false
+    height <= 650 && width <= 600 ? true : false
   );
   const [showProjectDisplay, setShowProjectDisplay] = useState<boolean>(
     isMobile ? false : true
@@ -38,7 +38,7 @@ export const Projects = forwardRef<Ref, IPage>((props, ref) => {
   };
 
   useEffect(() => {
-    setIsMobile(height <= 550 && width <= 300 ? true : false);
+    setIsMobile(height <= 650 && width <= 600 ? true : false);
     setShowProjectDisplay(isMobile ? false : true);
     if (!isMobile) {
       setShowProjectDisplay(true);
@@ -56,7 +56,6 @@ export const Projects = forwardRef<Ref, IPage>((props, ref) => {
       ref={ref}
       className="flex flex-row  gap-6 justify-center w-screen h-[90vh] overflow-hidden"
     >
-      <p>{isMobile ? 'MOBILE' : 'DESKTOP'}</p>
       <ProjectsList
         isMobile={isMobile}
         isOpen={showProjectsList}
