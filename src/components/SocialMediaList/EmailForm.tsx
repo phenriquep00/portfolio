@@ -78,7 +78,7 @@ export function EmailForm({ mobile, toggle }: IEmailForm) {
         className={`flex  ${
           mobile
             ? "min-w-full w-full self-center justify-self-center p-3"
-            : "flex-1"
+            : "flex-1 px-3"
         } flex-col items-center justify-center border-2 border-[#1B7DEB] bg-black rounded bg-opacity-70  h-full`}
       >
         <h1
@@ -167,9 +167,16 @@ export function EmailForm({ mobile, toggle }: IEmailForm) {
           </button>
         </div>
       </form>
-      <button className="text-[#feda4a] underline" onClick={() => {toggle(false)}}>
-        check social media
-      </button>
+      {mobile && (
+        <button
+          className="text-[#feda4a] underline"
+          onClick={() => {
+            toggle(false);
+          }}
+        >
+          check social media
+        </button>
+      )}
     </div>
   );
 }

@@ -26,7 +26,7 @@ export function SocialMediaItem({
   return (
     <>
       {render && (
-        <li className="flex-1 flex border-2 animate-contactCard border-[#feda4a] max-h-16 bg-black bg-opacity-70 justify-start rounded items-start w-full h-full">
+        <li className="flex-1 flex border-2 animate-contactCard border-[#feda4a] max-h-16 bg-black bg-opacity-70 justify-start rounded items-start w-full h-full hover:bg-opacity-100 transition-colors duration-300">
           <a
             href={link}
             target="_blank"
