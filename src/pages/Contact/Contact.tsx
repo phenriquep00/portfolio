@@ -31,7 +31,6 @@ export const Contact = forwardRef<Ref, IPage>((props, ref) => {
           isMobile ? "h-5/6" : "gap-4 h-3/4"
         }  w-full `}
       >
-        {width} {height}
         <SocialMediaList />
         {showEmailForm && (
           <EmailForm mobile={isMobile} toggle={setShowEmailForm} />
@@ -40,7 +39,7 @@ export const Contact = forwardRef<Ref, IPage>((props, ref) => {
 
       {!showEmailForm && (
         <Button onClick={() => setShowEmailForm(true)} type="p">
-          {width} {height}
+          Send me a email
         </Button>
       )}
     </div>
