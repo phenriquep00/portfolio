@@ -9,14 +9,14 @@ export const Contact = forwardRef<Ref, IPage>((props, ref) => {
   //TODO: if the viewport is mobile,  toggle email form with a button
   const { height, width } = useWindowDimensions();
   const [isMobile, setIsMobile] = useState(
-    height >= 650 && width >= 401 ? false : true
+    height >= 550 && width >= 300 ? false : true
   );
   const [showEmailForm, setShowEmailForm] = useState<boolean>(
     isMobile ? false : true
   );
 
   useEffect(() => {
-    setIsMobile(height >= 650 && width >= 401 ? false : true);
+    setIsMobile(height >= 550 && width >= 300 ? false : true);
     setShowEmailForm(isMobile ? false : true);
   }, [width, height]);
 
