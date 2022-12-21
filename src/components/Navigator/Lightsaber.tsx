@@ -1,3 +1,5 @@
+import { useState } from "react";
+import useWindowDimensions from "../../hooks/useWindowDimentions";
 import "./navigator.css";
 
 interface ILightsaber {
@@ -15,6 +17,12 @@ export function Lightsaber({
   activePage,
   onClick,
 }: ILightsaber) {
+
+  const { height, width } = useWindowDimensions();
+  const [isMobile, setIsMobile] = useState(
+    height >= 650 && width >= 401 ? false : true
+  );
+
   return (
     <button
       onClick={onClick}
@@ -37,17 +45,17 @@ export function Lightsaber({
       </p>
       <div className="flex flex-row items-center">
         <img
-          className="w-10 mt-[-28px] z-10 h-18 lightsaber"
+          className={`${isMobile ? 'w-6 h-14 mt-[-20px]' : 'w-10  h-18 mt-[-28px]'} lightsaber z-10`}
           src={hilt}
           alt=""
         />
         {activePage === text ? (
           color === "lime" ? (
-            <div className="saber-lime"></div>
+            <div className={`saber-lime ${isMobile ? 'w-12 h-[2px] -mb-2 ml-4' : ''}`}></div>
           ) : color === "red" ? (
-            <div className="saber-red"></div>
+            <div className={`saber-red ${isMobile ? 'w-12 h-[2px] -mb-2 ml-4' : ''}`}></div>
           ) : (
-            <div className="saber-blue"></div>
+            <div className={`saber-blue ${isMobile ? 'w-12 h-[2px] -mb-2 ml-4' : ''}`}></div>
           )
         ) : null}
       </div>
