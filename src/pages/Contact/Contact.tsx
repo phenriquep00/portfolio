@@ -26,9 +26,16 @@ export const Contact = forwardRef<Ref, IPage>((props, ref) => {
       ref={ref}
       className="flex flex-col p-2 items-center rounded-md  justify-evenly w-4/5 h-[88vh] animate-contact my-2 bg-opacity-50 bg-gray-700"
     >
-      <div className={`flex flex-row p-4 ${isMobile ? 'h-5/6' : 'gap-4 h-3/4'}  w-full `}>
+      <div
+        className={`flex flex-row p-4 ${
+          isMobile ? "h-5/6" : "gap-4 h-3/4"
+        }  w-full `}
+      >
+        {width} {height}
         <SocialMediaList />
-        {showEmailForm && <EmailForm mobile={isMobile} toggle={setShowEmailForm}/>}
+        {showEmailForm && (
+          <EmailForm mobile={isMobile} toggle={setShowEmailForm} />
+        )}
       </div>
 
       {!showEmailForm && (
