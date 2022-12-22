@@ -4,9 +4,15 @@ interface IProjectTitle {
   title: string;
   active: string;
   handleClick: (newProjectTitle: string) => void;
+  isMobile: boolean;
 }
 
-export function ProjectTitle({ title, active, handleClick }: IProjectTitle) {
+export function ProjectTitle({
+  title,
+  active,
+  handleClick,
+  isMobile,
+}: IProjectTitle) {
   const [isActive, setIsActive] = useState<boolean>(
     title === active ? true : false
   );
@@ -24,7 +30,9 @@ export function ProjectTitle({ title, active, handleClick }: IProjectTitle) {
         isActive
           ? "bg-[#FFE81F] text-black"
           : "text-[#feda4a] hover:active-item"
-      } p-2 font-black transition ease-in-out duration-75 -skew-y-12 -skew-x-12  whitespace-nowrap overflow-clip`}
+      }
+      ${isMobile ? "min-h-[9vh]" : ""}
+      p-2 font-black transition ease-in-out duration-75 -skew-y-12 -skew-x-12  whitespace-nowrap overflow-clip`}
     >
       {title}
     </button>
