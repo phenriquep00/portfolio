@@ -9,9 +9,13 @@ import {
 } from "phosphor-react";
 import { SocialMediaItem } from "./SocialMediaItem";
 
-export function SocialMediaList() {
+interface ISocialMediaList {
+  hide: boolean
+}
+
+export function SocialMediaList({hide}: ISocialMediaList) {
   return (
-    <ul className="flex flex-col gap-4 flex-1 h-full overflow-y-scroll">
+    <ul className={`flex flex-col gap-4 flex-1 h-full overflow-y-scroll ${hide && 'invisible'}`}>
       <SocialMediaItem
         description="check out my profile on github"
         link="https://github.com/phenriquep00"
