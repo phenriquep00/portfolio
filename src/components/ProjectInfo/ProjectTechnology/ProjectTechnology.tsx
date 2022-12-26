@@ -36,57 +36,57 @@ export function ProjectTechnology({ tech }: IProjectTechnology) {
       {
         tech === "typescript" ? (
           <div className="flex gap-1 justify-center items-center">
-            <img className="w-16 h-16" src={typescript} alt="typescript logo" />
+            <img className="w-8 h-8" src={typescript} alt="typescript logo" />
             <p>{tech}</p>
           </div>
         ) : tech === "python" ? (
           <div className="flex gap-1 justify-center items-center">
-            <img className="w-16 h-16" src={python} alt="python logo" />
+            <img className="w-8 h-8" src={python} alt="python logo" />
             <p>{tech}</p>
           </div>
         ) : tech === "reactjs" || tech === "react-native" ? (
           <div className="flex gap-1 justify-center items-center">
-            <img className="w-16 h-16" src={react} alt="react logo" />
+            <img className="w-8 h-8" src={react} alt="react logo" />
             <p>{tech}</p>
           </div>
         ) : tech === "javascript" ? (
           <div className="flex gap-1 justify-center items-center">
-            <img className="w-16 h-16" src={javascript} alt="javascript logo" />
+            <img className="w-8 h-8" src={javascript} alt="javascript logo" />
             <p>{tech}</p>
           </div>
         ) : tech === "html" ? (
           <div className="flex gap-1 justify-center items-center">
-            <img className="w-16 h-16" src={html} alt="html logo" />
+            <img className="w-8 h-8" src={html} alt="html logo" />
             <p>{tech}</p>
           </div>
         ) : tech === "css" ? (
           <div className="flex gap-1 justify-center items-center">
-            <img className="w-16 h-16" src={css} alt="css logo" />
+            <img className="w-8 h-8" src={css} alt="css logo" />
             <p>{tech}</p>
           </div>
         ) : tech === "bash" ? (
           <div className="flex gap-1 justify-center items-center">
-            <img className="w-16 h-16" src={bash} alt="bash logo" />
+            <img className="w-8 h-8" src={bash} alt="bash logo" />
             <p>{tech}</p>
           </div>
         ) : tech === "nodejs" ? (
           <div className="flex gap-1 justify-center items-center">
-            <img className="w-16 h-16" src={node} alt="nodejs logo" />
+            <img className="w-8 h-8" src={node} alt="nodejs logo" />
             <p>{tech}</p>
           </div>
         ) : tech === "pandas" ? (
           <div className="flex gap-1 justify-center items-center">
-            <img className="w-16 h-16" src={pandas} alt="pandas logo" />
+            <img className="w-8 h-8" src={pandas} alt="pandas logo" />
             <p>{tech}</p>
           </div>
         ) : tech === "tailwindcss" ? (
           <div className="flex gap-1 justify-center items-center">
-            <img className="w-16 h-16" src={tailwind} alt="tailwind logo" />
+            <img className="w-8 h-8" src={tailwind} alt="tailwind logo" />
             <p>{tech}</p>
           </div>
         ) : tech === "vite" ? (
           <div className="flex gap-1 justify-center items-center">
-            <img className="w-16 h-16" src={vite} alt="vite logo" />
+            <img className="w-8 h-8" src={vite} alt="vite logo" />
             <p>{tech}</p>
           </div>
         ) : (
