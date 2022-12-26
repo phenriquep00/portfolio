@@ -31,7 +31,7 @@ export function ProjectTitle({
           ? "bg-[#FFE81F] text-black"
           : "text-[#feda4a] hover:active-item"
       }
-      ${isMobile ? "min-h-[9vh]" : ""}
+      ${isMobile ? "min-h-[9vh]" : "min-h-[12vh]"}
       p-2 font-black transition ease-in-out duration-75 -skew-y-12 -skew-x-12  whitespace-nowrap overflow-clip`}
     >
       {title}
