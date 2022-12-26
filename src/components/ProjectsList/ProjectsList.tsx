@@ -36,7 +36,7 @@ export function ProjectsList({
           <div
             className={`${
               isMobile ? "w-screen text-[5vh] pb-5" : "w-[40vw] text-[8vh] pt-56"
-            } flex flex-col justify-center p-16 h-screen overflow-y-scroll overflow-x-auto`}
+            } flex flex-col justify-center p-16 h-screen overflow-y-scroll overflow-x-auto scrollbar`}
           >
             {data.map((project, index) => (
               <ProjectTitle
