@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{html,tsx}"],
   theme: {
     extend: {
+      colors: {
+        'brand': '#feda4a',
+      },
       animation: {
         project_display: "project_display .5s ease-in-out",
         project_list: "project_list .5s ease-in-out",

@@ -26,10 +26,10 @@ export function ProjectTitle({
       onClick={() => {
         handleClick(title);
       }}
-      className={`border-2 border-[#feda4a] ${
+      className={`border-2 border-brand ${
         isActive
           ? "bg-[#FFE81F] text-black"
-          : "text-[#feda4a] hover:active-item"
+          : "text-brand hover:active-item"
       }
       ${isMobile ? "min-h-[9vh]" : "min-h-[12vh]"}
       p-2 font-black transition ease-in-out duration-75 -skew-y-12 -skew-x-12  whitespace-nowrap overflow-clip`}

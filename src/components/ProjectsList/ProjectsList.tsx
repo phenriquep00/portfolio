@@ -28,7 +28,7 @@ export function ProjectsList({
               onClick={() => {
                 toggle();
               }}
-              className="flex items-center justify-center w-14 h-14 border-2 border-[#feda4a] m-2"
+              className="flex items-center justify-center w-14 h-14 border-2 border-brand m-2"
             >
               <ArrowLineLeft size={40} color={"#feda4a"} weight="bold" />
             </button>
