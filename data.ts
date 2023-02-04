@@ -30,6 +30,23 @@ export interface IData {
 
 export const data: IData[] = [
   {
+    title: "NLW-Setup",
+    img: "https://user-images.githubusercontent.com/81166239/204522990-c1887aba-032f-49f4-bb01-eef15f7fef7f.png",
+    description: "",
+    status: ["completed", "offline", "repository only"],
+    technologies: [
+      "vite",
+      "typescript",
+      "reactjs",
+      "react-native",
+      "nodejs",
+
+      "tailwindcss",
+      "html",
+      "css",
+    ],
+  },
+  {
     title: "TODOApp",
     img: "https://user-images.githubusercontent.com/81166239/204522990-c1887aba-032f-49f4-bb01-eef15f7fef7f.png",
     description:
@@ -115,6 +132,6 @@ export const data: IData[] = [
     description:
       "A hangman web application created with react and stylized with tailwindcss. The words come from a custom server on supabase",
     status: ["completed", "offline", "repository only"],
-    technologies: ["reactjs", "javascript", "css", "html", ],
+    technologies: ["reactjs", "javascript", "css", "html"],
   },
 ];
