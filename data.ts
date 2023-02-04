@@ -31,8 +31,9 @@ export interface IData {
 export const data: IData[] = [
   {
     title: "NLW-Setup",
-    img: "https://user-images.githubusercontent.com/81166239/204522990-c1887aba-032f-49f4-bb01-eef15f7fef7f.png",
-    description: "",
+    img: "https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/project_images/nlw-setup.png",
+    description:
+      "Single user Habbit Tracker application with both web and mobile versions developed in Rocketseat's Next Level Week. With this application, the user can create habbits to be completed on specific week days and see a graph that shows their progress over time",
     status: ["completed", "offline", "repository only"],
     technologies: [
       "vite",
