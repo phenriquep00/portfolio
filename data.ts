@@ -63,6 +63,21 @@ export const data: IData[] = [
     ],
   },
   {
+    title: "Recipes-app",
+    img: "https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/project_images/recipes-app.jpg",
+    description:
+      "This is a recipe search app built with React, Typescript, Spoonacular API, and Tailwind CSS. It allows users to search for recipes by keywords, filter by diet and cuisine preferences, and view recipe details including ingredients and preparation instructions. The app provides a seamless user experience with responsive design and an intuitive interface.",
+    status: ["in progress", "active"],
+    technologies: [
+      "vite",
+      "typescript",
+      "reactjs",
+      "html",
+      "tailwindcss",
+      "css",
+    ],
+  },
+  {
     title: "Nlw e-sports",
     img: "https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/project_images/nlw-esports.png",
     description:
