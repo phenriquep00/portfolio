@@ -9,14 +9,19 @@ export function App() {
   useEffect(() => {
     setTimeout(() => {
       setShowSplashScreen(false);
-    }, 5000);
-  }, [])
+    }, 2000);
+  }, []);
 
   return (
     <>
-      {showSplashScreen && <SplashScreen /> }
-      <Background />
-      <Content />
+      {showSplashScreen ? (
+        <SplashScreen />
+      ) : (
+        <>
+          <Background />
+          <Content />
+        </>
+      )}
     </>
   );
 }
