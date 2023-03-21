@@ -9,7 +9,7 @@ export function CrawlText() {
   useEffect(() => {
     setTimeout(() => {
       setStartCrawl(true);
-    }, 5000);
+    }, 10000);
   });
 
   return (

@@ -33,7 +33,7 @@ export const data: IData[] = [
     title: "NLW-Setup",
     img: "https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/project_images/nlw-setup.png",
     description:
-      "Single user Habbit Tracker application with both web and mobile versions developed in Rocketseat's Next Level Week. With this application, the user can create habbits to be completed on specific week days and see a graph that shows their progress over time",
+      "NLW-Setup is a full-stack application built with React, React Native, and Node.js using Fastify as the backend framework. The frontend is styled with Tailwind CSS and Radix UI, and the project is written in TypeScript. The application allows users to create and track their daily habits, with the ability to view which habits they have completed and what habits they have available in the week. The development environment is set up using Vite, with HTML and CSS also being used in the project.",
     status: ["completed", "offline", "repository only"],
     technologies: [
       "vite",
