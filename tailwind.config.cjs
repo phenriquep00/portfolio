@@ -9,10 +9,11 @@ module.exports = {
       animation: {
         project_display: "project_display .5s ease-in-out",
         project_list: "project_list .5s ease-in-out",
-        prelude: "prelude 10s ease-in-out",
-        fadein: "fadein 2s ease-in-out",
+        prelude: "prelude 7s ease-in-out",
+        fadein: "fadein 5s ease-in-out",
         contact: "contact 0.75s ease-in-out",
         contactCard: "contactCard 0.75s ease-in-out",
+        homeIntro: "homeIntro 2s ease-in-out",
       },
       keyframes: {
         project_display: {
@@ -65,6 +66,14 @@ module.exports = {
             transform: "translate(0%, 0%)"
           }
         },
+        homeIntro: {
+          "0%": {
+            transform: "translate(-100%, 0%)"
+          },
+          "100%": {
+            transform: "translate(-2%, 0%)"
+          }
+        }
       },
     },
   },

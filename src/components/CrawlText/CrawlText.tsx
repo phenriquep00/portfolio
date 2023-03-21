@@ -1,16 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import "./crawl-text.css";
 
 export function CrawlText() {
-  //TODO: make the fade div smoother
-
   const [startCrawl, setStartCrawl] = useState<boolean>(false);
 
   useEffect(() => {
     setTimeout(() => {
       setStartCrawl(true);
-    }, 10000);
-  });
+    }, 7000);
+  }, []);
 
   return (
     <>

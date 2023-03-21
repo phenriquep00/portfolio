@@ -17,8 +17,7 @@
   position: relative;
   top: -100px;
   transform-origin: 50% 100%;
-  animation: crawl 40s linear;
-  animation-iteration-count: infinite;
+  animation: crawl 25s linear, fadein 3s;
 }
 
 .crawl > .title {
@@ -36,8 +35,24 @@
     top: 0;
     transform: rotateX(20deg) translateZ(0);
   }
-  100% {
-    top: -2200px;
+  99% {
+    top: -1800px;
+    opacity: .75;
     transform: rotateX(18deg) translateZ(-600px);
+  }
+  100% {
+    top: -1900px;
+    opacity: 0;
+    display: none;
+    transform: rotateX(18deg) translateZ(-600px);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
