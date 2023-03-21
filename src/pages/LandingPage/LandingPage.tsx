@@ -1,4 +1,4 @@
-import { ArrowClockwise } from "phosphor-react";
+import { ArrowClockwise, FastForward } from "phosphor-react";
 import { forwardRef, useEffect, useState } from "react";
 import { Button } from "../../components/Button/Button";
 import { CrawlText } from "../../components/CrawlText/CrawlText";
@@ -7,6 +7,7 @@ import { HomeInfo } from "../../components/HomeInfo/HomeInfo";
 
 export const LandingPage = forwardRef<Ref, IPage>((props, ref) => {
   const [showCrawl, setShowCrawl] = useState<boolean>(true);
+  const [showHomeInfo, setShowHomeInfo] = useState<boolean>(true);
 
   /* useEffect(() => {
     setTimeout(() => {
@@ -17,30 +18,47 @@ export const LandingPage = forwardRef<Ref, IPage>((props, ref) => {
   useEffect(() => {
     setTimeout(() => {
       setShowCrawl(false);
+      setShowHomeInfo(true);
     }, 26000);
-  }, [])
+  }, [showCrawl]);
+
+  const handleRestartAnimation = () => {
+    setShowCrawl(true);
+    setShowHomeInfo(false);
+  };
 
   return (
     <div className="flex flex-col items-center justify-center w-screen h-[90vh] ">
       <div className="flex w-full h-[90%] overflow-hidden">
         {showCrawl ? <CrawlText /> : null}
-        <HomeInfo />
+        {showHomeInfo ? <HomeInfo /> : null}
       </div>
-      <div className="flex flex-row items-center gap-4 justify-around w-full h-[10%]">
-        <Button
-          type="p"
-          onClick={() => {
-            setShowCrawl(true);
-          }}
-        >
+      <div className="flex flex-row items-center gap-20 justify-center w-full h-[10%] ">
+        {/* TODO: fix restart animation desapearing in the middle of the process */}
+        <Button type="p" onClick={handleRestartAnimation} >
           <div
-            className="w-full h-full hover:animate-spin"
+            className="w-full h-full flex gap-2 items-center justify-center group"
             title="restart animation"
           >
-            <ArrowClockwise size={24} weight="bold" />
+            <div className="group-hover:animate-spin">
+              <ArrowClockwise size={24} weight="bold" />
+            </div>
+             Restart
+          </div>
+        </Button>
+
+        <Button type="p" onClick={() => {/* TODO: skip animation function */}}>
+          <div
+            className="w-full h-full flex gap-2 items-center justify-center group"
+            title="restart animation"
+          >
+            <div className="group-hover:animate-pulse">
+              <FastForward size={24} weight="bold" />
+            </div>
+             Skip
           </div>
         </Button>
       </div>
     </div>
   );
-})
+});
