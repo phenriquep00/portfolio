@@ -7,24 +7,20 @@ import { HomeInfo } from "../../components/HomeInfo/HomeInfo";
 
 export const LandingPage = forwardRef<Ref, IPage>((props, ref) => {
   const [showCrawl, setShowCrawl] = useState<boolean>(true);
-  const [showHomeInfo, setShowHomeInfo] = useState<boolean>(true);
+  // set this to true when finished homeinfo component
+  const [showHomeInfo, setShowHomeInfo] = useState<boolean>(false);
 
+  // uncomment this after finished the home info component
   /* useEffect(() => {
-    setTimeout(() => {
-      setShowCrawl(true);
-    }, 1);
-  }, [showCrawl]); */
-
-  useEffect(() => {
     setTimeout(() => {
       setShowCrawl(false);
       setShowHomeInfo(true);
     }, 26000);
-  }, [showCrawl]);
+  }, [showCrawl]); */
 
   const handleRestartAnimation = () => {
     setShowCrawl(true);
-    setShowHomeInfo(false);
+    /* setShowHomeInfo(false); */
   };
 
   return (
@@ -35,7 +31,7 @@ export const LandingPage = forwardRef<Ref, IPage>((props, ref) => {
       </div>
       <div className="flex flex-row items-center gap-20 justify-center w-full h-[10%] ">
         {/* TODO: fix restart animation desapearing in the middle of the process */}
-        <Button type="p" onClick={handleRestartAnimation} >
+        {/* <Button type="p" onClick={handleRestartAnimation} >
           <div
             className="w-full h-full flex gap-2 items-center justify-center group"
             title="restart animation"
@@ -45,9 +41,9 @@ export const LandingPage = forwardRef<Ref, IPage>((props, ref) => {
             </div>
              Restart
           </div>
-        </Button>
+        </Button> */}
 
-        <Button type="p" onClick={() => {/* TODO: skip animation function */}}>
+        {/* <Button type="p" onClick={ // create this logic to skip the crawl animation }}>
           <div
             className="w-full h-full flex gap-2 items-center justify-center group"
             title="restart animation"
@@ -57,7 +53,7 @@ export const LandingPage = forwardRef<Ref, IPage>((props, ref) => {
             </div>
              Skip
           </div>
-        </Button>
+        </Button> */}
       </div>
     </div>
   );
