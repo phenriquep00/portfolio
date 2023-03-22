@@ -17,7 +17,7 @@
   position: relative;
   top: -100px;
   transform-origin: 50% 100%;
-  animation: crawl 25s linear, fadein 3s;
+  animation: crawl 25s linear infinite, fadein 3s; /* change infinite to linear after finished homeinfo component*/
 }
 
 .crawl > .title {
