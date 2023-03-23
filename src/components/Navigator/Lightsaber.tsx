@@ -26,7 +26,7 @@ export function Lightsaber({
   return (
     <button
       onClick={onClick}
-      className="flex flex-col flex-1 items-center justify-center hover:bg-white rounded hover:bg-opacity-20"
+      className="flex flex-col flex-1 items-center justify-center hover:bg-white rounded hover:bg-opacity-20 transition-all duration-300 ease-in-out"
     >
       <p
         className={`text-xl font-semibold 

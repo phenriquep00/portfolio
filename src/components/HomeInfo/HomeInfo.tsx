@@ -13,7 +13,7 @@ export function HomeInfo() {
         />
 
         <div className="ml-10 flex flex-col absolute top-0 w-full">
-          <div className="ml-6 border-l-2 animate-fadein duration-75 border-black pl-2 flex flex-col items-center justify-center text-left text-xl font-semibold w-2/5 h-1/2 mt-16 text-black">
+          <div className="ml-6 border-l-2 animate-fadein duration-200 border-black pl-2 flex flex-col items-center justify-center text-left text-xl font-semibold w-2/5 h-1/2 mt-16 text-black">
             <p>
               Welcome to my portfolio! I'm thrilled that you've stopped by to
               learn more about my skills and experience as a developer.
