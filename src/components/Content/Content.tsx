@@ -26,8 +26,7 @@ export function Content() {
   };
 
   return (
-    <div className="absolute w-full h-full top-0 left-0 text-white overflow-hidden">
-      <div className="flex flex-col items-center justify-center">
+    <div className="absolute flex items-center justify-center flex-col w-full h-full top-0 left-0 text-white overflow-hidden">
         {activePage === "Home" ? (
           <LandingPage ref={LandingPageRef} />
         ) : activePage === "Projects" ? (
@@ -35,7 +34,6 @@ export function Content() {
         ) : (
           <Contact ref={contactRef} />
         )}
-      </div>
       <Navigator
         activePage={activePage}
         focusLandingPage={handleLandingPageFocus}

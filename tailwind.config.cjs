@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         'brand': '#feda4a',
       },
+      backgroundImage: {
+        'tatooine': "url('/tatooine.png')"
+      },
       animation: {
         project_display: "project_display .5s ease-in-out",
         project_list: "project_list .5s ease-in-out",

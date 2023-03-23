@@ -26,10 +26,10 @@ export function Lightsaber({
   return (
     <button
       onClick={onClick}
-      className="flex flex-col flex-1 items-center justify-center"
+      className="flex flex-col flex-1 items-center justify-center hover:bg-white rounded hover:bg-opacity-20"
     >
       <p
-        className={`text-md font-semibold 
+        className={`text-xl font-semibold 
         ${
           activePage === text
             ? color === "lime"
