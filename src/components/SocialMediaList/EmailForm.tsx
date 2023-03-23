@@ -140,7 +140,7 @@ export function EmailForm({ mobile, toggle }: IEmailForm) {
             ></textarea>
           </div>
 
-          <button className="" onSubmit={sendEmail}>
+          <button className="border-2 p-2 text-brand text-semibold text-lg rounded hover:bg-black/50 transition-all ease-in-out duration-200 border-brand" onSubmit={sendEmail}>
             {loading === true ? (
               <ReactLoading
                 type={"bars"}
@@ -153,8 +153,7 @@ export function EmailForm({ mobile, toggle }: IEmailForm) {
             )}
           </button>
         </div>
-      </form>
-      {mobile && (
+        {mobile && (
         <button
           className=""
           onClick={() => {
@@ -164,6 +163,8 @@ export function EmailForm({ mobile, toggle }: IEmailForm) {
           check social media
         </button>
       )}
+      </form>
+      
     </>
   );
 }
