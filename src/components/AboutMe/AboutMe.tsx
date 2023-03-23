@@ -10,7 +10,7 @@ export function AboutMe() {
       </div>
       <div className="flex flex-col gap-4 overflow-y-hidden">
         <CrawlText />
-      <img src={r2d2} className="-mt-12" alt="" />
+      <img src={r2d2} className="-mt-12 md:w-[80%] md:self-center" alt="r2d2" />
       </div>
       
     </div>

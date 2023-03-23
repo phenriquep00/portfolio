@@ -26,10 +26,10 @@ export function Lightsaber({
   return (
     <button
       onClick={onClick}
-      className="flex flex-col flex-1 items-center justify-center hover:bg-white rounded hover:bg-opacity-20 transition-all duration-300 ease-in-out"
+      className="flex flex-col flex-1 items-center pt-2 justify-evenly hover:bg-white rounded hover:bg-opacity-20 transition-all duration-300 ease-in-out"
     >
       <p
-        className={`text-xl font-semibold 
+        className={`lg:text-xl md:text-lg text-base leading-loose pt-4 font-semibold -mb-5
         ${
           activePage === text
             ? color === "lime"
@@ -43,9 +43,9 @@ export function Lightsaber({
       >
         {text}
       </p>
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center mt-4 ">
         <img
-          className={`${isMobile ? 'w-6 h-14 mt-[-20px]' : 'w-10  h-18 mt-[-28px]'} lightsaber z-10`}
+          className={`${isMobile ? 'w-6 h-14 mt-[-20px]' : 'w-10  h-18 md:mt-[-28px]'} lightsaber z-50 `}
           src={hilt}
           alt=""
         />
