@@ -26,7 +26,7 @@ export function Content() {
   };
 
   return (
-    <div className="absolute flex items-center justify-center flex-col w-full h-full top-0 left-0 text-white overflow-hidden">
+    <div className="absolute flex items-center justify-center flex-col w-full h-[90%] top-0 left-0 text-white overflow-hidden">
         {activePage === "Home" ? (
           <LandingPage ref={LandingPageRef} />
         ) : activePage === "Projects" ? (

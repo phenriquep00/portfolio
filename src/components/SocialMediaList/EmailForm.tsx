@@ -71,7 +71,7 @@ export function EmailForm({ mobile, toggle }: IEmailForm) {
     setLoading(false); // finish loading animation
   };
   return (
-    <div className="flex flex-col gap-4">
+    <>
       <form
         ref={form}
         onSubmit={sendEmail}
@@ -79,17 +79,13 @@ export function EmailForm({ mobile, toggle }: IEmailForm) {
           mobile
             ? "min-w-full w-full self-center justify-self-center p-3"
             : "flex-1 px-3"
-        } flex-col items-center justify-center border-2 border-[#1B7DEB] bg-black rounded bg-opacity-70  h-full`}
+        }flex bg-black bg-opacity-50 items-center flex-col rounded-md border border-blue-500`}
       >
-        <h1
-          className={`text-white ${
-            mobile ? "text-2xl mb-[-20px]" : " py-4 text-3xl"
-          } font-black whitespace-nowrap`}
-        >
+        <h1 className={`text-white ${mobile ? "text-2xl" : ""} text-3xl py-4 font-semibold`}>
           Send me a email!
         </h1>
 
-        <div className={`flex flex-col gap-4 ${mobile ? "w-full" : ""}`}>
+        <div className="flex flex-col mb-4 flex-1 items-center justify-between">
           <FormDialog
             message="your email was sent, thank you!"
             type="success"
@@ -106,14 +102,12 @@ export function EmailForm({ mobile, toggle }: IEmailForm) {
               setinvalidDialog(false);
             }}
           />
-          <div className="flex gap-3 items-center justify-between">
+          <div className="flex items-center gap-1 sm:gap-4">
             <label className="font-semibold " htmlFor="email">
               email:
             </label>
             <input
-              className={`${
-                mobile ? "w-[40vw]" : " w-[25vw]"
-              } h-8 bg-gray-700 bg-opacity-50 border-2 border-[#1B7DEB] rounded`}
+              className={`${mobile ? "w-[40vw]" : " w-[25vw]"} bg-white/40 rounded-lg h-8`}
               type="text"
               name="from_email"
               id=""
@@ -121,14 +115,12 @@ export function EmailForm({ mobile, toggle }: IEmailForm) {
             />
           </div>
 
-          <div className="flex gap-3 items-center justify-between">
-            <label className="font-semibold " htmlFor="name">
+          <div className="flex items-center gap-1 sm:gap-4">
+            <label className="" htmlFor="name">
               name:
             </label>
             <input
-              className={`${
-                mobile ? "w-[40vw]" : " w-[25vw]"
-              } h-8 bg-gray-700 bg-opacity-50 border-2 border-[#1B7DEB] rounded`}
+              className={`${mobile ? "w-[40vw]" : " w-[25vw]"} bg-white/40 rounded-lg h-8`}
               type="text"
               name="from_name"
               id=""
@@ -136,24 +128,19 @@ export function EmailForm({ mobile, toggle }: IEmailForm) {
             />
           </div>
 
-          <div className="flex gap-3 items-center justify-between">
+          <div className="flex items-center gap-1 sm:gap-4">
             <label className="font-semibold " htmlFor="content">
               content:
             </label>
             <textarea
-              className={`${
-                mobile ? "w-[37vw]" : " w-[25vw]"
-              } h-12 bg-gray-700 bg-opacity-50 border-2 border-[#1B7DEB] rounded`}
+              className={`${mobile ? "w-[37vw]" : " w-[25vw]"} bg-white/40 rounded-lg` }
               name="message"
               id=""
               ref={message}
             ></textarea>
           </div>
 
-          <button
-            className="flex items-center justify-center border-2 border-[#feda4a] font-semibold text-xl h-14 w-20 self-center rounded text-[#feda4a]"
-            onSubmit={sendEmail}
-          >
+          <button className="" onSubmit={sendEmail}>
             {loading === true ? (
               <ReactLoading
                 type={"bars"}
@@ -169,7 +156,7 @@ export function EmailForm({ mobile, toggle }: IEmailForm) {
       </form>
       {mobile && (
         <button
-          className="text-[#feda4a] underline"
+          className=""
           onClick={() => {
             toggle(false);
           }}
@@ -177,6 +164,6 @@ export function EmailForm({ mobile, toggle }: IEmailForm) {
           check social media
         </button>
       )}
-    </div>
+    </>
   );
 }
