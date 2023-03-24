@@ -38,7 +38,7 @@ export function HomeInfo() {
             </p>
           </div>
 
-          <div className="flex fixed bottom-[15%] w-[65%] justify-evenly items-center animate-fadein duration-150 h-[100px]">
+          <div className="flex fixed bottom-[15%] w-[65%] justify-evenly items-center animate-prelude h-[100px]">
             {logos.map((logo, index) => (
               <img
                 src={logo}
