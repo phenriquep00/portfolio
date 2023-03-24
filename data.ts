@@ -26,6 +26,7 @@ export interface IData {
   description: string;
   status: status[];
   technologies: technologies[];
+  links?: [];
 }
 
 export const data: IData[] = [

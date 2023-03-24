@@ -1,12 +1,15 @@
 import { CaretLeft } from "phosphor-react";
+import { IData, data } from "../../../data";
 
 interface IProjectsList {
   isMobile: boolean;
+  updateCurrentProject: (newCurrentProject: IData | string) => void;
 }
 
-const mockData = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-export function ProjectsList({ isMobile }: IProjectsList) {
+export function ProjectsList({
+  isMobile,
+  updateCurrentProject,
+}: IProjectsList) {
   return (
     <div className="flex w-1/12">
       {isMobile ? (
@@ -15,14 +18,19 @@ export function ProjectsList({ isMobile }: IProjectsList) {
         </button>
       ) : (
         <ul className="h-full w-full flex flex-col justify-between items-end gap-2">
-          {mockData.map((e, i) => (
+          {data.map((project, index) => (
             <li
               className="flex flex-1 w-full justify-center flex-grow text-black items-center rounded-l-full bg-brand hover:bg-opacity-50 transition-colors duration-300 ease-in-out"
-              key={`${e}+${i}`}
+              key={`${project.title}+${index}`}
             >
-                <button className="w-full h-full">
-                    {e}
-                </button>
+              <button
+                onClick={() => {
+                  updateCurrentProject(project);
+                }}
+                className="w-full h-full"
+              >
+                {project.title}
+              </button>
             </li>
           ))}
         </ul>
