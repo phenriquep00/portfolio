@@ -15,7 +15,7 @@ export function Navigator({
   activePage,
 }: INavigator) {
   return (
-    <div className="flex gap-4 w-screen items-center justify-around overflow-hidden">
+    <div className="fixed bottom-0 h-[10%] flex gap-4 w-screen items-center justify-around overflow-hidden">
       <Lightsaber
         hilt="https://raw.githubusercontent.com/phenriquep00/portfolio/main/public/lightsaber1.png"
         color="lime"

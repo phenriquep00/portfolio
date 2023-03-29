@@ -3,7 +3,7 @@ import "./crawl-text.css";
 export function CrawlText() {
   return (
     <>
-      <div className="flex flex-col -mt-5 gap-2 flex-1 p-6" id="crawl-container">
+      <div className="flex flex-col -mt-8 pb-8 gap-2 flex-1  py-6" id="crawl-container">
         <div id="crawl">
           <h1 className="text-4xl text-center font-bold text-brand">
             Hello there! My name is Pedro Henrique

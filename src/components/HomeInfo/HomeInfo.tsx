@@ -13,7 +13,7 @@ export function HomeInfo() {
         />
 
         <div className="ml-10 flex flex-col absolute top-0 w-full">
-          <div className="ml-6 border-l-2 animate-fadein duration-75 border-black pl-2 flex flex-col items-center justify-center text-left text-xl font-semibold w-2/5 h-1/2 mt-16 text-black">
+          <div className="ml-6 border-l-2 animate-prelude border-black pl-2 flex flex-col items-center justify-center text-left sm:text-base text-sm md:text-base lg:text-lg xl:text-xl  text-black font-semibold xl:w-2/5 w-3/5 h-1/2 mt-16">
             <p>
               Welcome to my portfolio! I'm thrilled that you've stopped by to
               learn more about my skills and experience as a developer.
@@ -38,12 +38,12 @@ export function HomeInfo() {
             </p>
           </div>
 
-          <div className="flex w-[65%] justify-evenly items-center animate-fadein duration-150 h-[100px] mt-[150px] ">
+          <div className="flex fixed bottom-[15%] w-[65%] justify-evenly items-center animate-prelude h-[100px]">
             {logos.map((logo, index) => (
               <img
                 src={logo}
                 alt="tech logo"
-                className="w-12 h-12"
+                className="w-12 h-12" 
                 key={`${logo}+${index}`}
               />
             ))}

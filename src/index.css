@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  .font-outline-2 {
+    -webkit-text-stroke: 2px #feda4a;
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px #feda4a;
+  }
+}
+
 @layer components {
   .item{
     perspective: 100px

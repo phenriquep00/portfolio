@@ -15,7 +15,7 @@ interface ISocialMediaList {
 
 export function SocialMediaList({hide}: ISocialMediaList) {
   return (
-    <ul className={`flex flex-col gap-4 flex-1 h-full overflow-y-scroll ${hide && 'invisible'}`}>
+    <ul className={`flex flex-col gap-4 flex-1 h-[120%] self-center overflow-y-scroll ${hide && 'invisible'}`}>
       <SocialMediaItem
         description="check out my profile on github"
         link="https://github.com/phenriquep00"

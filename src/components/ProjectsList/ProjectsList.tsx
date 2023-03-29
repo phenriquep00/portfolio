@@ -1,55 +1,40 @@
-import { ProjectTitle } from "./ProjectTitle";
-import { IData } from "../../../data";
-import { ArrowLineLeft } from "phosphor-react";
+import { CaretLeft } from "phosphor-react";
+import { IData, data } from "../../../data";
 
-interface IProjectList {
+interface IProjectsList {
   isMobile: boolean;
-  isOpen: boolean;
-  toggle: () => void;
-  data: IData[];
-  active: string;
-  changeSelectedProject: (newProjectTitle: string) => void;
+  updateCurrentProject: (newCurrentProject: IData | string) => void;
 }
 
 export function ProjectsList({
   isMobile,
-  isOpen,
-  toggle,
-  data,
-  active,
-  changeSelectedProject,
-}: IProjectList) {
+  updateCurrentProject,
+}: IProjectsList) {
   return (
-    <>
-      {isOpen && (
-        <div className="flex flex-col animate-project_list">
-          {isMobile ? (
-            <button
-              onClick={() => {
-                toggle();
-              }}
-              className="flex items-center justify-center w-14 h-14 border-2 border-brand m-2"
+    <div className="flex w-1/12">
+      {isMobile ? (
+        <button className="bg-brand h-full rounded-l-full">
+          <CaretLeft size={48} weight="fill" color={"#000000"} />
+        </button>
+      ) : (
+        <ul className="h-full w-full flex flex-col justify-between items-end gap-2">
+          {data.map((project, index) => (
+            <li
+              className="flex flex-1 w-full justify-center flex-grow text-black items-center rounded-l-full bg-brand hover:bg-opacity-50 transition-colors duration-300 ease-in-out"
+              key={`${project.title}+${index}`}
             >
-              <ArrowLineLeft size={40} color={"#feda4a"} weight="bold" />
-            </button>
-          ) : null}
-          <div
-            className={`${
-              isMobile ? "w-screen text-[5vh] pb-5" : "w-[40vw] text-[8vh] pt-[70%]"
-            } flex flex-col justify-center p-16 h-screen overflow-y-scroll overflow-x-auto scrollbar`}
-          >
-            {data.map((project, index) => (
-              <ProjectTitle
-                key={index}
-                title={project.title}
-                active={active}
-                handleClick={changeSelectedProject}
-                isMobile={isMobile}
-              />
-            ))}
-          </div>
-        </div>
+              <button
+                onClick={() => {
+                  updateCurrentProject(project);
+                }}
+                className="w-full h-full"
+              >
+                {project.title}
+              </button>
+            </li>
+          ))}
+        </ul>
       )}
-    </>
+    </div>
   );
 }
