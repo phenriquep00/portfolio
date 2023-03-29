@@ -13,8 +13,8 @@ export function ProjectsList({
   return (
     <div className="flex w-1/12">
       {isMobile ? (
-        <button className="bg-brand h-full rounded-l-full">
-          <CaretLeft size={48} weight="fill" color={"#000000"} />
+        <button className="bg-brand h-full rounded-l-full text-black hover:bg-opacity-70 hover:text-white transition-all duration-300">
+          <CaretLeft size={48} weight="fill" />
         </button>
       ) : (
         <ul className="h-full w-full flex flex-col justify-between items-end gap-2">
