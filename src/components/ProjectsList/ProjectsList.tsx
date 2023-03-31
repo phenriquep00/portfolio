@@ -1,7 +1,9 @@
-import { CaretLeft } from "phosphor-react";
+import { CaretLeft, CaretRight } from "phosphor-react";
 import { IData, data } from "../../../data";
+import { Projects } from "./Projects";
+import { useState } from "react";
 
-interface IProjectsList {
+export interface IProjectsList {
   isMobile: boolean;
   updateCurrentProject: (newCurrentProject: IData | string) => void;
 }
@@ -10,30 +12,34 @@ export function ProjectsList({
   isMobile,
   updateCurrentProject,
 }: IProjectsList) {
+  const [isProjectListOpen, setIsProjectListOpen] = useState(false);
+
+  const toggleIsProjectListOpen = () => {
+    setIsProjectListOpen(!isProjectListOpen);
+  };
+
   return (
-    <div className="flex w-1/12">
+    <div className="flex w-auto">
       {isMobile ? (
-        <button className="bg-brand h-full rounded-l-full text-black hover:bg-opacity-70 hover:text-white transition-all duration-300">
-          <CaretLeft size={48} weight="fill" />
-        </button>
+        isProjectListOpen ? (
+          <div className="bg-brand flex items-center rounded-l-3xl">
+            <button className="text-black hover:text-white transition-colors duration-300" onClick={toggleIsProjectListOpen}>
+              <CaretRight size={48} weight="fill"/>
+            </button>
+            
+            <Projects isMobile={isMobile} updateCurrentProject={updateCurrentProject} />
+          </div>
+          
+        ) : (
+          <button
+            className="bg-brand h-full rounded-l-full text-black hover:bg-opacity-70 hover:text-white transition-all duration-300"
+            onClick={toggleIsProjectListOpen}
+          >
+            <CaretLeft size={48} weight="fill" />
+          </button>
+        )
       ) : (
-        <ul className="h-full w-full flex flex-col justify-between items-end gap-2">
-          {data.map((project, index) => (
-            <li
-              className="flex flex-1 w-full justify-center flex-grow text-black items-center rounded-l-full bg-brand hover:bg-opacity-50 transition-colors duration-300 ease-in-out"
-              key={`${project.title}+${index}`}
-            >
-              <button
-                onClick={() => {
-                  updateCurrentProject(project);
-                }}
-                className="w-full h-full"
-              >
-                {project.title}
-              </button>
-            </li>
-          ))}
-        </ul>
+        <Projects isMobile={isMobile} updateCurrentProject={updateCurrentProject} />
       )}
     </div>
   );
