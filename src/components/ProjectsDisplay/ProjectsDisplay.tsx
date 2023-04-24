@@ -1,4 +1,7 @@
 import { IData, status, technologies } from "../../../data";
+import { AnchorsSection } from "./AnchorsSection";
+import { StatusSection } from "./StatusSection";
+import { TechnologiesSection } from "./TechnologiesSection";
 
 interface IProjectsDisplay {
   isMobile: boolean;
@@ -21,53 +24,24 @@ export function ProjectsDisplay({
         </div>
       ) : (
         <>
-          <div className="flex w-1/2  justify-between h-full py-4 gap-4 flex-col items-center text-black">
-            <div className="flex flex-col items-center justify-center gap-4  p-4 h-1/2 w-full">
+          <div className="flex w-1/2 justify-between h-full py-4 gap-4 flex-col items-center text-black">
+            <div className="flex first-line:marker:flex-col items-center justify-center gap-4  p-4 h-1/2 w-full">
               <img
-                className="border-2 border-brand rounded-md"
+                className="border-2 border-brand w-full h-full rounded-md"
                 src={currentProject.img}
                 alt="project image"
               />
             </div>
             <div className="flex flex-col items-center justify-between gap-2 w-full h-1/2 mt-5">
-              <div className="flex flex-col items-center mt-5 justify-center p-4 rounded-xl w-full text-white border-2 border-blue-500">
-                <div className="bg-blue-500 rounded p-2 px-4 relative -top-9">
-                  links
-                </div>
-                <div className="relative -mt-6">
-                  links (github repo / project page)
-                </div>
-              </div>
+              <AnchorsSection />
 
-              <div className="flex flex-col items-center justify-center p-4  rounded-xl w-full text-white border-2 border-blue-500">
-                <div className="bg-blue-500 rounded p-2 px-4 relative -top-9">
-                  technologies
-                </div>
-                <div className="flex w-full justify-evenly">
-                  {currentProject.technologies.map(
-                    (tech: technologies, index: number) => (
-                      <p key={`${tech}+${index}`}>{tech}</p>
-                    )
-                  )}
-                </div>
-              </div>
+              <TechnologiesSection currentProject={currentProject}/>
 
-              <div className="flex flex-col items-center justify-center p-4 rounded-xl w-full text-white border-2 border-blue-500">
-                <div className="bg-blue-500 rounded p-2 px-4 relative -top-9">
-                  status
-                </div>
-                <div className="flex w-full justify-evenly -mt-6">
-                  {currentProject.status.map(
-                    (status: status, index: number) => (
-                      <p key={`${status}+${index}`}>{status}</p>
-                    )
-                  )}
-                </div>
-              </div>
+              <StatusSection currentProject={currentProject}/>
             </div>
           </div>
 
-          <div className="flex flex-1 flex-col h-full w-1/2 justify-around text-center text-2xl items-center p-4 ">
+          <div className="flex flex-1 flex-col border-brand border-2 rounded h-full w-1/2 justify-around text-center text-2xl items-center p-4 ">
             <div className="">
                 <h1 className="flex text-5xl font-black font-outline-2 text-transparent">
               {currentProject?.title}{" "}

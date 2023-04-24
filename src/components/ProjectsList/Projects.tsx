@@ -1,4 +1,4 @@
-import { IData, data } from "../../../data";
+import { data } from "../../../data";
 import { IProjectsList } from "./ProjectsList";
 
 export function Projects({ updateCurrentProject, isMobile }: IProjectsList) {
