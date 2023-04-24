@@ -26,7 +26,8 @@ export interface IData {
   description: string;
   status: status[];
   technologies: technologies[];
-  links?: [];
+  github?: string;
+  page?: string;
 }
 
 export const data: IData[] = [
@@ -47,9 +48,11 @@ export const data: IData[] = [
       "html",
       "css",
     ],
+    github: "https://github.com/phenriquep00/nlw-setup",
+
   },
   {
-    title: "TODOApp",
+    title: "Tasklist",
     img: "https://user-images.githubusercontent.com/81166239/204522990-c1887aba-032f-49f4-bb01-eef15f7fef7f.png",
     description:
       "A web application to manage tasks and tasklists. The user save their tasks with google account easy login, and can use the same account in many devices at once. The app is very keyboard friendly and all of it's core functionalities can be acceced through hotkeys",
@@ -62,6 +65,8 @@ export const data: IData[] = [
       "html",
       "css",
     ],
+    github: "https://github.com/phenriquep00/tasklist",
+    page: "https://tasklist-umber.vercel.app/",
   },
   {
     title: "Recipes-app",
@@ -77,6 +82,7 @@ export const data: IData[] = [
       "tailwindcss",
       "css",
     ],
+    github: "https://github.com/phenriquep00/recipes-app",
   },
   {
     title: "Nlw e-sports",
@@ -94,6 +100,7 @@ export const data: IData[] = [
       "tailwindcss",
       "css",
     ],
+    github: "https://github.com/phenriquep00/nlw-esports",
   },
   {
     title: "Poker",
@@ -102,6 +109,7 @@ export const data: IData[] = [
       "A Poker game created with python & pygame. The players plays against 3 bots in a classic poker match where the winner is the last one with chips in the table.",
     status: ["active", "completed", "repository only"],
     technologies: ["python"],
+    github: "https://github.com/phenriquep00/poker"
   },
   {
     title: "Nlw Return",
@@ -119,6 +127,7 @@ export const data: IData[] = [
       "html",
       "css",
     ],
+    github: "https://github.com/phenriquep00/NLW-Return",
   },
   {
     title: "Beat Machine",
@@ -127,6 +136,7 @@ export const data: IData[] = [
       "A python & pygame application that simulates a drum kit. The app allows the user to select the beats per second and the amount of beats to repeat. The user can also save and import beats following a simple .txt file with the pattern.",
     status: ["active", "completed", "repository only"],
     technologies: ["python"],
+    github: "https://github.com/phenriquep00/beat-machine",
   },
   {
     title: "Imersão Dados 4",
@@ -134,6 +144,7 @@ export const data: IData[] = [
     description: "A data science project created during Alura's Imersão Dados.",
     status: ["completed", "active", "repository only"],
     technologies: ["python", "pandas"],
+    github: "https://github.com/phenriquep00/imersao-dados-4",
   },
 
   {
@@ -142,6 +153,7 @@ export const data: IData[] = [
     description: "A simple pong game made with python's turtle library",
     status: ["completed", "repository only"],
     technologies: ["python"],
+    github: "https://github.com/phenriquep00/pong",
   },
   {
     title: "Hangman",
@@ -150,5 +162,6 @@ export const data: IData[] = [
       "A hangman web application created with react and stylized with tailwindcss. The words come from a custom server on supabase",
     status: ["completed", "offline", "repository only"],
     technologies: ["reactjs", "javascript", "css", "html"],
+    github: "https://github.com/phenriquep00/hangman",
   },
 ];
