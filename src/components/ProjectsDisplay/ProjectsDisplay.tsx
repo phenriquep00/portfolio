@@ -33,7 +33,7 @@ export function ProjectsDisplay({
               />
             </div>
             <div className="flex flex-col items-center justify-between gap-2 w-full h-1/2 mt-5">
-              <AnchorsSection />
+              <AnchorsSection github={currentProject.github}/>
 
               <TechnologiesSection currentProject={currentProject}/>
 

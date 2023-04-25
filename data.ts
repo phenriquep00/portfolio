@@ -49,6 +49,7 @@ export const data: IData[] = [
       "css",
     ],
     github: "https://github.com/phenriquep00/nlw-setup",
+    page: "",
 
   },
   {
@@ -83,6 +84,7 @@ export const data: IData[] = [
       "css",
     ],
     github: "https://github.com/phenriquep00/recipes-app",
+    page: "",
   },
   {
     title: "Nlw e-sports",
@@ -101,6 +103,7 @@ export const data: IData[] = [
       "css",
     ],
     github: "https://github.com/phenriquep00/nlw-esports",
+    page: "",
   },
   {
     title: "Poker",
@@ -109,7 +112,8 @@ export const data: IData[] = [
       "A Poker game created with python & pygame. The players plays against 3 bots in a classic poker match where the winner is the last one with chips in the table.",
     status: ["active", "completed", "repository only"],
     technologies: ["python"],
-    github: "https://github.com/phenriquep00/poker"
+    github: "https://github.com/phenriquep00/poker",
+    page: "",
   },
   {
     title: "Nlw Return",
@@ -128,6 +132,7 @@ export const data: IData[] = [
       "css",
     ],
     github: "https://github.com/phenriquep00/NLW-Return",
+    page: "",
   },
   {
     title: "Beat Machine",
@@ -137,6 +142,7 @@ export const data: IData[] = [
     status: ["active", "completed", "repository only"],
     technologies: ["python"],
     github: "https://github.com/phenriquep00/beat-machine",
+    page: "",
   },
   {
     title: "Imersão Dados 4",
@@ -145,6 +151,7 @@ export const data: IData[] = [
     status: ["completed", "active", "repository only"],
     technologies: ["python", "pandas"],
     github: "https://github.com/phenriquep00/imersao-dados-4",
+    page: "",
   },
 
   {
@@ -154,6 +161,7 @@ export const data: IData[] = [
     status: ["completed", "repository only"],
     technologies: ["python"],
     github: "https://github.com/phenriquep00/pong",
+    page: "",
   },
   {
     title: "Hangman",
@@ -163,5 +171,6 @@ export const data: IData[] = [
     status: ["completed", "offline", "repository only"],
     technologies: ["reactjs", "javascript", "css", "html"],
     github: "https://github.com/phenriquep00/hangman",
+    page: "",
   },
 ];
