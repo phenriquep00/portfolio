@@ -1,4 +1,5 @@
 import { IData, technologies } from "../../../data";
+import { icons } from "../../utils/icons";
 
 export interface ISection {
     currentProject: IData | any;
@@ -13,7 +14,7 @@ export function TechnologiesSection({currentProject}: ISection) {
                 <div className="flex w-full justify-evenly">
                   {currentProject.technologies.map(
                     (tech: technologies, index: number) => (
-                      <p key={`${tech}+${index}`}>{tech}</p>
+                    {icons.map(())}
                     )
                   )}
                 </div>

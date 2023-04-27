@@ -43,7 +43,6 @@ export const data: IData[] = [
       "reactjs",
       "react-native",
       "nodejs",
-
       "tailwindcss",
       "html",
       "css",
