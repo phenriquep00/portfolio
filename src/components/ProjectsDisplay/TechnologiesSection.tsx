@@ -14,7 +14,7 @@ export function TechnologiesSection({currentProject}: ISection) {
                 <div className="flex w-full justify-evenly">
                   {currentProject.technologies.map(
                     (tech: technologies, index: number) => (
-                    {icons.map(())}
+                      <p key={`${tech}+${index}`}>{tech}</p>
                     )
                   )}
                 </div>
