@@ -27,7 +27,7 @@ export function ProjectsDisplay({
           <div className="flex w-1/2 justify-between h-full py-4 gap-4 flex-col items-center text-black">
             <div className="flex first-line:marker:flex-col items-center justify-center gap-4  p-4 h-1/2 w-full">
               <img
-                className="border-2 border-brand w-full h-full rounded-md"
+                className="border-2 border-brand w-full h-full rounded-md object-contain"
                 src={currentProject.img}
                 alt="project image"
               />
