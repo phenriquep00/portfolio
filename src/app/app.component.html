@@ -1,4 +1,11 @@
-
-<main class="">
-</main>
-<router-outlet />
+<main class="flex flex-col min-h-screen">
+    <div class="flex-1 overflow-y-scroll">
+        <router-outlet></router-outlet>
+    </div>
+    
+    <footer class="bg-gray-800 text-white py-4 mt-auto flex items-center justify-around">
+      <div *ngFor="let page of pages">
+        <button (click)="navigateTo(page.path)">{{page.name}}</button>
+      </div>
+    </footer>
+  </main>
