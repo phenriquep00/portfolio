@@ -1,35 +1,41 @@
 {
   "name": "portfolio",
-  "private": true,
   "version": "0.0.0",
-  "type": "module",
-  "homepage": "https://phenriquep00.github.io/portfolio/",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "preview": "vite preview"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
   },
+  "private": true,
   "dependencies": {
-    "@emailjs/browser": "^3.10.0",
-    "email-js": "^2.0.2",
-    "phosphor-react": "^1.4.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-loading": "^2.0.3",
-    "react-tsparticles": "^2.5.3",
-    "tsparticles": "^2.5.3"
+    "@angular/animations": "^19.0.0",
+    "@angular/common": "^19.0.0",
+    "@angular/compiler": "^19.0.0",
+    "@angular/core": "^19.0.0",
+    "@angular/forms": "^19.0.0",
+    "@angular/platform-browser": "^19.0.0",
+    "@angular/platform-browser-dynamic": "^19.0.0",
+    "@angular/router": "^19.0.0",
+    "@ngx-translate/core": "^16.0.4",
+    "@ngx-translate/http-loader": "^16.0.1",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
-    "@vitejs/plugin-react": "^2.2.0",
-    "autoprefixer": "^10.4.13",
-    "gh-pages": "^4.0.0",
-    "postcss": "^8.4.19",
-    "tailwindcss": "^3.2.4",
-    "typescript": "^4.6.4",
-    "vite": "^3.2.3"
+    "@angular-devkit/build-angular": "^19.0.6",
+    "@angular/cli": "^19.0.6",
+    "@angular/compiler-cli": "^19.0.0",
+    "@types/jasmine": "~5.1.0",
+    "jasmine-core": "~5.4.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.6.2"
   }
 }
