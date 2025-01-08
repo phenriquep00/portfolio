@@ -1,11 +1,9 @@
 <main class="flex flex-col min-h-screen">
-    <div class="flex-1 overflow-y-scroll">
-        <router-outlet></router-outlet>
-    </div>
-    
-    <footer class="bg-gray-800 text-white py-4 mt-auto flex items-center justify-around">
-      <div *ngFor="let page of pages">
-        <button (click)="navigateTo(page.path)">{{page.name}}</button>
-      </div>
-    </footer>
-  </main>
+  <div class="flex-1 overflow-y-scroll bg-black text-white">
+    <router-outlet>
+      <app-language-switch></app-language-switch>
+    </router-outlet>
+  </div>
+  <app-page-navigator></app-page-navigator>
+  <h1 class="bg-red-500 text-white">{{ 'LANDING_PAGE_HEADER' | translate }}</h1>
+</main>

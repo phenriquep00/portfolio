@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
 import { pages } from './models/pages.model';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +10,5 @@ import { pages } from './models/pages.model';
 })
 export class AppComponent {
   title = 'portfolio';
-  pages = pages;
 
-  constructor(private router: Router) { }
-
-  navigateTo(path: string): void {
-    this.router.navigate([path]);
-  }
 }
