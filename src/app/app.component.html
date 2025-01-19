@@ -1,9 +1,9 @@
-<main class="flex flex-col min-h-screen">
-  <div class="flex-1 overflow-y-scroll bg-black text-white">
+<main class="flex flex-col min-h-screen bg-black text-white">
+  <div class="flex-1 overflow-y-scroll">
     <router-outlet>
       <app-language-switch></app-language-switch>
     </router-outlet>
   </div>
   <app-page-navigator></app-page-navigator>
-  <h1 class="bg-red-500 text-white">{{ 'LANDING_PAGE_HEADER' | translate }}</h1>
+  <!-- <h1 class="bg-red-500 text-white">{{ 'LANDING_PAGE_HEADER' | translate }}</h1> -->
 </main>

@@ -1,5 +1,5 @@
-<footer class="bg-gray-800 text-white py-4 mt-auto flex items-center justify-around">
+<footer class="bg-gray-800 text-white py-4 mt-auto flex items-center justify-around rounded-t-lg">
     <div *ngFor="let page of pages">
-        <button (click)="navigateTo(page.path)">{{page.name}}</button>
+        <button (click)="navigateTo(page.path)">{{ page.name | translate }}</button>
     </div>
 </footer>

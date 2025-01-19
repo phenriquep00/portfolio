@@ -7,6 +7,10 @@ export const routes: Routes = [
         loadChildren: () => import('./modules/landing-page/landing-page.module').then(m => m.LandingPageModule),
     },
     {
+        path: 'about-me',
+        loadChildren: () => import('./modules/about-me/about-me.module').then(m => m.AboutMeModule),
+    },
+    {
         path: 'experience',
         loadChildren: () => import('./modules/experience/experience.module').then(m => m.ExperienceModule),
     },
