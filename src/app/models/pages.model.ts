@@ -1,18 +1,22 @@
 export const pages = [
     {
-        name: 'Landing Page',
+        name: 'PAGE.LANDING',
         path: ''
     },
     {
-        name: 'Experiences',
+        name: 'PAGE.ABOUT_ME',
+        path: '/about-me'
+    },
+    {
+        name: 'PAGE.EXPERIENCES',
         path: '/experience'
     },
     {
-        name: 'Contact',
+        name: 'PAGE.CONTACT',
         path: '/contact'
     },
     {
-        name: 'Projects',
+        name: 'PAGE.PROJECTS',
         path: '/projects'
     }
 ]

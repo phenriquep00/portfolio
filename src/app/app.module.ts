@@ -28,7 +28,7 @@ export function HttpLoaderFactory(http: HttpClient) {
                 provide: TranslateLoader,
                 useFactory: HttpLoaderFactory,
                 deps: [HttpClient]
-              }
+            }
         }),
         PageNavigatorModule,
         LanguageSwitchModule

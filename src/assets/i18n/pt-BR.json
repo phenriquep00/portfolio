@@ -1,3 +1,15 @@
 {
-    "LANDING_PAGE_HEADER": "Bem-vindo ao nosso aplicativo"
+    "LANDING_PAGE_HEADER": "Bem-vindo ao nosso aplicativo",
+    "ABOUT_ME_PAGE_HEADER": "Página Sobre mim",
+    "CONTACT_PAGE_HEADER": "Página Contato",
+    "EXPERIENCE_PAGE_HEADER": "Página Experiencia",
+    "PROJECTS_PAGE_HEADER": "Página Projetos",
+
+    "PAGE": {
+      "LANDING": "Página Inicial",
+      "ABOUT_ME": "Sobre Mim",
+      "EXPERIENCES": "Experiências",
+      "CONTACT": "Contato",
+      "PROJECTS": "Projetos"
+    }
 }

@@ -2,6 +2,9 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ProjectsComponent } from "./projects.component";
 import { ProjectsRouteModule } from "./projects-routing.module";
+import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
+import { HttpClient } from "@angular/common/http";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
 
 @NgModule({
@@ -10,7 +13,14 @@ import { ProjectsRouteModule } from "./projects-routing.module";
     ],
     imports: [
         ProjectsRouteModule,
-        CommonModule
+        CommonModule,
+        TranslateModule.forChild({
+                            loader: {
+                                provide: TranslateLoader,
+                                useFactory: (http: HttpClient) => new TranslateHttpLoader(http, './assets/i18n/', '.json'),
+                                deps: [HttpClient]
+                            }
+                        }),
     ],
     providers: []
 })
