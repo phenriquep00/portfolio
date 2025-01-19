@@ -1,1 +1,53 @@
-<h1 class="text-white">{{ 'ABOUT_ME_PAGE_HEADER' | translate }}</h1>
+<!-- <h1 class="text-white">{{ 'ABOUT_ME_PAGE_HEADER' | translate }}</h1> -->
+<div class="flex flex-row items-center gap-4 justify-between h-[87vh] mt-8 mx-7 px-7 overflow-hidden">
+    <div class="h-full flex flex-col items-center w-[78%]">
+        <div class="w-full h-3/4 border-blue-100 flex flex-col items-center justify-center relative overflow-hidden">
+            <div 
+                *ngIf="renderContent" 
+                class="bg-opacity-60 w-full h-full flex flex-col items-center justify-center animate-expand-horizontal" 
+                style="background: linear-gradient(to top, #bfdbfe 15%, #60a5fa 85%); clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);"
+            >
+                <div 
+                    class="bg-black w-[99%] h-[98%] flex flex-col items-center justify-center" 
+                    style="clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);">
+                    content
+                </div>
+                
+            </div>
+        </div>
+    
+        <div 
+            *ngIf="renderHologram"
+            class="bg-blue-200 animate-expand-horizontal"
+            style="clip-path: polygon(50% 100%, 0% 0%, 100% 0%); height: 5%; width: 90%;"
+        ></div>
+    
+        <div class="w-full h-1/4 flex flex-col items-center justify-center">
+            <img src="assets/images/ships/xwing.png" alt="x-wing" class="w-[27%] animate-zoom-in">
+        </div>
+    </div>
+
+    <div class="w-[20%] h-full flex flex-col items-center justify-between">
+        <div class="w-full flex flex-col items-center justify-center relative">
+            <img 
+                src="assets/images/ships/milenium-falcon.png" 
+                alt="milenium falcon" 
+                class="w-[50%] absolute animate-fly-vertical"
+            >
+        </div>
+        <div *ngIf="renderProfile" class="relative inline-block w-[360px] h-[360px] animate-slide-up">
+            <!-- Profile image -->
+            <img 
+                class="absolute top-[83px] left-[100px] w-[45%] object-cover rounded-full z-10" 
+                src="https://github.com/phenriquep00.png" 
+                alt="github profile image">
+            
+            <!-- Frame image -->
+            <img 
+                class="absolute top-0 left-0 w-full h-full z-20 pointer-events-none" 
+                src="assets/images/frames/jedi-hood-frame.png" 
+                alt="jedi hood frame">
+        </div>
+        
+    </div>
+</div>
